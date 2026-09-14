@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARIYAPALA — Aliansi Rimba Pecinta Alam Yayasan Pesantren Cintawana</title>
+<meta name="description" content="Website resmi ARIYAPALA (Aliansi Rimba Pecinta Alam) — lembaga pecinta alam Yayasan Pesantren Cintawana & SMK YPC, Singaparna, Tasikmalaya. Berdiri 7 Januari 2001. Salam Rimba!">
+<meta name="theme-color" content="#0d3b2e">
+<link rel="icon" type="image/png" href="images/logo-hidup-160.png">
+<link rel="canonical" href="https://ariyapala.pages.dev/">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARIYAPALA">
+<meta property="og:locale" content="id_ID">
+<meta property="og:title" content="ARIYAPALA — Aliansi Rimba Pecinta Alam Cintawana">
+<meta property="og:description" content="Lembaga pecinta alam Yayasan Pesantren Cintawana & SMK YPC, Singaparna, Tasikmalaya. Berdiri 7 Januari 2001. Salam Rimba!">
+<meta property="og:url" content="https://ariyapala.pages.dev/">
+<meta property="og:image" content="https://ariyapala.pages.dev/images/og-share.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Emblem ARIYAPALA di atas latar hutan dengan tagline organisasi">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ARIYAPALA — Aliansi Rimba Pecinta Alam Cintawana">
+<meta name="twitter:description" content="Lembaga pecinta alam Ponpes Cintawana & SMK YPC, Singaparna, Tasikmalaya — sejak 7 Januari 2001.">
+<meta name="twitter:image" content="https://ariyapala.pages.dev/images/og-share.png">
+<script type="application/ld+json">
+{
+ "@context":"https://schema.org","@type":"Organization",
+ "name":"ARIYAPALA",
+ "alternateName":"Aliansi Rimba Pecinta Alam Yayasan Pesantren Cintawana",
+ "foundingDate":"2001-01-07",
+ "description":"Lembaga pecinta alam Yayasan Pesantren Cintawana dan SMK YPC di Singaparna, Kabupaten Tasikmalaya, Jawa Barat.",
+ "url":"https://ariyapala.pages.dev/",
+ "logo":"https://ariyapala.pages.dev/images/logo-ariyapala-hidup.png",
+ "parentOrganization":{"@type":"Organization","name":"Yayasan Pesantren Cintawana"},
+ "sameAs":["https://ariyapala.blogspot.com/"],
+ "address":{"@type":"PostalAddress","streetAddress":"Komplek Ponpes Cintawana, Desa Cikunten","addressLocality":"Singaparna","addressRegion":"Jawa Barat","addressCountry":"ID"}
+}
+</script>
+<!-- Cloudflare Web Analytics: setelah situs di-deploy ke Pages & analytics aktif,
+     buka tab Zonir > Analytics & Logs > Web Analytics > Setup, lalu tempel blok
+     <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"TOKEN-ANDA"}'></script>
+     tepat sebelum tag </body>. Dibiarkan nonaktif agar tak ada panggilan percuma. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Archivo:wght@700;800;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --hutan:#0d3b2e;
+    --hutan-tua:#0a2e24;
+    --hutan-terang:#14532d;
+    --daun:#1a6b4a;
+    --emas:#f7c948;
+    --navi:#183c5e;      /* medan navy logo resmi */
+    --langit:#1878c0;    /* biru tulisan pita logo */
+    --lava:#dc3a23;      /* lava gunung logo     */
+    --emas-tua:#e8940a;
+    --kertas:#f8faf7;
+    --abu:#5c6f66;
+    --putih:#ffffff;
+    --radius:16px;
+    --bayang:0 10px 30px rgba(13,59,46,.10);
+    --bayang-kuat:0 18px 45px rgba(13,59,46,.22);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  ::selection{background:var(--navi);color:var(--emas)}
+  body{font-family:'Plus Jakarta Sans','Segoe UI',system-ui,-apple-system,sans-serif;color:#22352d;background:var(--kertas);line-height:1.65}
+  img{max-width:100%;height:auto;display:block}
+  a{color:var(--daun);text-decoration:none}
+  h1,h2,h3{font-family:'Archivo','Plus Jakarta Sans',sans-serif;line-height:1.2}
+  .wadah{max-width:1120px;margin:0 auto;padding:0 20px}
+
+  /* ===== NAVBAR ===== */
+  header{position:fixed;top:0;left:0;right:0;z-index:1000;transition:background .3s,box-shadow .3s;background:rgba(10,46,36,.35);backdrop-filter:blur(10px)}
+  header.berbayang{background:linear-gradient(120deg,rgba(10,46,36,.97),rgba(24,60,94,.97));box-shadow:0 4px 20px rgba(0,0,0,.25)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .nav .brand{display:flex;align-items:center;gap:12px;color:#fff;font-weight:800;font-size:1.15rem;font-family:'Archivo',sans-serif}
+  .nav .brand img{height:48px;width:auto;flex-shrink:0}
+  .nav .brand small{display:block;font-size:.6rem;font-weight:500;letter-spacing:.14em;color:var(--emas);text-transform:uppercase;font-family:'Plus Jakarta Sans',sans-serif}
+  .menu{display:flex;align-items:center;gap:6px;list-style:none}
+  .menu a{color:#eaf4ee;font-size:.92rem;font-weight:600;padding:9px 13px;border-radius:10px;transition:.25s}
+  .menu a:hover{background:rgba(247,201,72,.18);color:var(--emas)}
+  .menu .btn-join{background:linear-gradient(135deg,var(--emas),var(--emas-tua));color:var(--hutan-tua)!important;margin-left:8px;box-shadow:0 6px 16px rgba(247,201,72,.35)}
+  .menu .btn-join:hover{transform:translateY(-2px);background:linear-gradient(135deg,#ffd968,var(--emas))}
+  .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
+  .burger span{display:block;width:26px;height:3px;background:#fff;border-radius:3px;margin:5px 0;transition:.3s}
+  .burger.buka span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+  .burger.buka span:nth-child(2){opacity:0}
+  .burger.buka span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+
+  /* ===== HERO ===== */
+  .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;background:url('images/hero.jpg') center/cover no-repeat}
+  .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,46,36,.72) 0%,rgba(10,46,36,.45) 45%,rgba(10,46,36,.88) 100%)}
+  .hero .wadah{position:relative;z-index:2;padding-top:100px;padding-bottom:60px}
+  .hero .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(247,201,72,.15);border:1px solid rgba(247,201,72,.5);color:var(--emas);font-size:.82rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;padding:8px 18px;border-radius:99px;margin-bottom:22px}
+  .hero h1{font-size:clamp(2.4rem,6vw,4.4rem);font-weight:900;letter-spacing:-.01em;margin-bottom:8px}
+  .hero h1 .kuning{color:var(--emas)}
+  .hero .sub{font-size:clamp(1.05rem,2.2vw,1.35rem);font-weight:500;color:#d8eadf;max-width:660px;margin-bottom:14px}
+  .hero .lokasi{display:flex;align-items:center;gap:8px;color:#b9d4c5;font-size:.95rem;margin-bottom:32px}
+  .hero .cta{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;gap:9px;padding:14px 28px;border-radius:12px;font-weight:700;font-size:.98rem;transition:.25s;border:none;cursor:pointer}
+  .btn-emas{background:linear-gradient(135deg,var(--emas),var(--emas-tua));color:var(--hutan-tua);box-shadow:0 10px 25px rgba(247,201,72,.35)}
+  .btn-emas:hover{transform:translateY(-3px);box-shadow:0 14px 32px rgba(247,201,72,.45)}
+  .btn-ghost{background:rgba(255,255,255,.10);border:2px solid rgba(255,255,255,.55);color:#fff;backdrop-filter:blur(4px)}
+  .btn-ghost:hover{background:rgba(255,255,255,.22);transform:translateY(-3px)}
+  .hero .angka{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:680px;margin-top:56px}
+  .angka .kotak{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.16);border-radius:var(--radius);padding:18px 20px;backdrop-filter:blur(6px)}
+  .angka b{display:block;font-family:'Archivo',sans-serif;font-size:1.9rem;color:var(--emas);line-height:1.1}
+  .angka span{font-size:.85rem;color:#cfe3d7}
+
+  /* ===== SEC UMUM ===== */
+  section{padding:88px 0}
+
+  /* ===== WATERMARK LOGO ===== */
+  /* Sumber: logo-ariyapala-glossy.png (versi hidup) -> images/logo-watermark.webp
+     (1000px, desaturasi .8, ~69KB). Samar, dekoratif, tak mengganggu teks. */
+  .wm{position:relative;overflow:hidden}
+  .wm::before{
+    content:"";position:absolute;inset:-8%;z-index:0;pointer-events:none;
+    background:url('images/logo-watermark.webp') no-repeat center/auto 58%;
+    opacity:.075;mix-blend-mode:multiply;filter:saturate(.85) brightness(.82);
+    will-change:auto
+  }
+  .wm > .wadah{position:relative;z-index:1}
+  .wm-kiri::before{background-position:12% 55%}
+  .wm-kanan::before{background-position:88% 45%}
+  .wm-besar::before{background-position:50% 48%;background-size:min(420px,60vw);opacity:.08}
+  /* section berlatar gelap: multiply tak terbaca → pakai screen */
+  .program-sec.wm::before{mix-blend-mode:screen;opacity:.09;filter:saturate(.5) brightness(1.25)}
+  @media(prefers-reduced-motion:reduce){.wm::before{will-change:auto}}
+  @media(max-width:640px){.wm::before{background-size:auto 220px;opacity:.05}}
+  /* ===== ALAM VIBE (kontur, ridge, jalur pendakian, foto lapangan) ===== */
+  /* 1) Tekstur garis kontur peta — overlay halus di atas semua latar, tak menghalangi interaksi */
+  body::before{content:"";position:fixed;inset:0;z-index:3;pointer-events:none;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='540' fill='none' stroke='%232f5d49' stroke-width='1.3' opacity='.06'%3E%3Cpath d='M0 60 Q225 20 450 60 T900 60'/%3E%3Cpath d='M0 150 Q225 200 450 150 T900 150'/%3E%3Cpath d='M0 240 Q225 210 450 240 T900 240'/%3E%3Cpath d='M0 330 Q225 380 450 330 T900 330'/%3E%3Cpath d='M0 420 Q225 395 450 420 T900 420'/%3E%3Cpath d='M0 500 Q225 535 450 500 T900 500'/%3E%3Cpath d='M0 100 Q225 60 450 100 T900 100' stroke-width='.8'/%3E%3Cpath d='M0 390 Q225 350 450 390 T900 390' stroke-width='.8'/%3E%3Cellipse cx='150' cy='300' rx='52' ry='26' stroke-width='.9'/%3E%3Cellipse cx='150' cy='300' rx='26' ry='12' stroke-width='.9'/%3E%3Cellipse cx='705' cy='90' rx='60' ry='28' stroke-width='.9'/%3E%3Cellipse cx='705' cy='90' rx='30' ry='13' stroke-width='.9'/%3E%3C/svg%3E") repeat center/900px 540px}
+  /* 2) Pemisah section = siluet punggung gunung: section berikutnya menumpuk -30px, tepi atas dipotong */
+  section+section{margin-top:-30px;padding-top:118px;
+    clip-path:polygon(0 20px,6% 8px,13% 16px,20% 4px,27% 14px,35% 6px,43% 17px,50% 9px,58% 19px,66% 7px,73% 15px,81% 4px,89% 12px,95% 6px,100% 17px,100% 100%,0 100%)}
+  /* 3) Linimasa sejarah & bidang = rute pendakian: garis putus ala jalur di peta + bendera summit */
+  .jalur::before{width:0;background:none;border-left:3px dashed var(--emas-tua);opacity:.85}
+  .titik::before{width:0;height:0;border:0;border-radius:0;background:none;box-shadow:none;
+    left:13px;top:2px;border-left:10px solid transparent;border-right:10px solid transparent;border-bottom:16px solid var(--daun)}
+  .titik .thn::before{content:"\25B2 ";color:var(--emas-tua);font-size:.8em}
+  /* 4) Foto lapangan: duotone hijau-hutan + grain film (juga di lightbox agar konsisten) */
+  .galeri-sec figure img,.foto-titik,.lightbox img{filter:saturate(.7) sepia(.18) hue-rotate(55deg) saturate(1.25) contrast(1.04) brightness(.98)}
+  .galeri-sec figure::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:.16;mix-blend-mode:soft-light;
+    background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url%28%23n%29' opacity='.6'/%3E%3C/svg%3E")}
+  .kepala-sec{text-align:center;max-width:700px;margin:0 auto 54px}
+  .kepala-sec .mini{color:var(--emas-tua);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:.78rem}
+  .kepala-sec h2{font-size:clamp(1.8rem,4vw,2.6rem);color:var(--hutan-tua);margin:10px 0 14px;font-weight:800}
+  .kepala-sec p{color:var(--abu);font-size:1.02rem}
+  .pemisah{width:72px;height:4px;border-radius:4px;background:linear-gradient(90deg,var(--navi),var(--emas),var(--daun));margin:14px auto 0}
+  .subjudul-sec{font-family:'Archivo',sans-serif;color:var(--hutan-tua);font-size:1.15rem;margin:40px 0 18px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+  .subjudul-sec::before{content:"";width:10px;height:10px;border-radius:3px;background:var(--emas-tua);display:inline-block}
+  .subjudul-sec small{color:var(--abu);font-weight:500;font-size:.8rem;font-family:'Plus Jakarta Sans',sans-serif}
+
+  /* ===== IDENTITAS ===== */
+  .grid-identitas{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:8px}
+  .identitas-card{background:#fff;border-radius:var(--radius);box-shadow:var(--bayang);padding:24px;text-align:center}
+  .identitas-card .bidang{border-radius:14px;display:flex;align-items:center;justify-content:center;height:210px;overflow:hidden}
+  .identitas-card .bidang.gelap{background:var(--hutan-tua)}
+  .identitas-card .bidang.oranye{background:#f66917}
+  .identitas-card .bidang.terang{background:#f6f2e4}
+  .identitas-card .bidang img{max-height:100%;max-width:100%;object-fit:contain}
+  .identitas-card h4{color:var(--hutan-tua);margin:16px 0 6px;font-size:1.02rem}
+  .identitas-card p{color:var(--abu);font-size:.85rem}
+  @media(max-width:960px){.grid-identitas{grid-template-columns:1fr}}
+
+  /* ===== PROFIL ===== */
+  .grid-profil{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+  .grid-profil .foto{position:relative}
+  .grid-profil .foto img{border-radius:20px;box-shadow:var(--bayang-kuat)}
+  .grid-profil .foto::after{content:"";position:absolute;inset:14px -14px -14px 14px;border:3px solid var(--emas);border-radius:20px;z-index:-1}
+  .grid-profil h3{color:var(--hutan-tua);font-size:1.5rem;margin-bottom:14px}
+  .grid-profil p{color:var(--abu);margin-bottom:14px}
+  .grid-profil p b{color:var(--hutan-tua)}
+  .visi-misi{background:var(--hutan-tua);color:#eaf4ee;border-radius:20px;padding:34px;margin-top:26px}
+  .visi-misi h4{color:var(--emas);font-family:'Archivo',sans-serif;font-size:1.05rem;margin-bottom:8px;letter-spacing:.06em;text-transform:uppercase}
+  .visi-misi p{color:#cfe3d7;font-size:.95rem;margin-bottom:18px}
+  .visi-misi ul{list-style:none}
+  .visi-misi li{position:relative;padding-left:28px;margin-bottom:9px;font-size:.95rem;color:#dcece2}
+  .visi-misi li::before{content:"⛰";position:absolute;left:0;top:0;font-size:.9rem}
+
+  /* ===== LINIMASA ===== */
+  .linimasa{background:linear-gradient(180deg,var(--kertas),#eef5ef)}
+  .jalur{position:relative;max-width:800px;margin:0 auto}
+  .jalur::before{content:"";position:absolute;left:22px;top:6px;bottom:6px;width:3px;background:linear-gradient(180deg,var(--emas),var(--daun));border-radius:3px}
+  .titik{position:relative;padding:0 0 34px 64px}
+  .titik::before{content:"";position:absolute;left:12px;top:4px;width:22px;height:22px;border-radius:50%;background:#fff;border:5px solid var(--daun);box-shadow:0 0 0 4px rgba(26,107,74,.15)}
+  .titik .thn{font-family:'Archivo',sans-serif;font-weight:800;color:var(--emas-tua);font-size:1.1rem}
+  .titik h4{color:var(--hutan-tua);font-size:1.12rem;margin:4px 0 6px}
+  .titik p{color:var(--abu);font-size:.95rem;max-width:600px}
+  .titik a{font-weight:700}
+  .titik .foto-titik{margin-top:12px;max-width:min(340px,100%);border-radius:12px;box-shadow:var(--bayang)}
+
+  /* ===== ANGKATAN & ANGGOTA ===== */
+  .bar-ang{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 14px;scrollbar-width:thin}
+  .ang-chip{flex:none;border:2px solid #d7e5dc;background:#fff;color:var(--hutan-tua);font-weight:700;font-size:.84rem;font-family:inherit;padding:9px 16px;border-radius:99px;cursor:pointer;transition:.2s}
+  .ang-chip b{color:var(--emas-tua);margin-left:6px}
+  .ang-chip:hover{border-color:var(--daun)}
+  .ang-chip.on{background:linear-gradient(135deg,var(--emas),var(--emas-tua));color:var(--hutan-tua);border-color:transparent;box-shadow:0 6px 16px rgba(247,201,72,.35)}
+  .ang-head{background:linear-gradient(120deg,var(--hutan),#123a4e);color:#fff;border-radius:14px;padding:18px 22px;margin:10px 0 18px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+  .ang-head h4{font-family:'Archivo',sans-serif;font-size:1.05rem}
+  .ang-head .thn{color:var(--emas);font-weight:800;font-size:.8rem}
+  .ang-head p{color:#cfe3d7;font-size:.86rem;flex-basis:100%}
+  .ang-head .ketchip{margin-left:auto;background:rgba(247,201,72,.16);border:1px solid rgba(247,201,72,.5);color:var(--emas);font-size:.74rem;font-weight:700;padding:5px 12px;border-radius:99px}
+  .ang-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+  .orang{background:#fff;border-radius:14px;box-shadow:var(--bayang);padding:16px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:3px;transition:.2s}
+  .orang:hover{transform:translateY(-4px);box-shadow:var(--bayang-kuat)}
+  .orang .foto{width:64px;height:64px;border-radius:50%;overflow:hidden;background:linear-gradient(135deg,var(--daun),var(--navi));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800;font-family:'Archivo',sans-serif;font-size:1.15rem}
+  .orang .foto img{width:100%;height:100%;object-fit:cover}
+  .orang b{font-size:.88rem;color:var(--hutan-tua);line-height:1.3}
+  .orang small{color:var(--abu);font-size:.76rem}
+  .orang .tag{margin-top:4px;font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:var(--emas-tua);background:rgba(247,201,72,.14);border:1px solid rgba(247,201,72,.4);padding:2px 9px;border-radius:99px}
+  @media(max-width:960px){.ang-grid{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:640px){.ang-grid{grid-template-columns:repeat(2,1fr)}}
+
+  /* ===== STRUKTUR ===== */
+  .pucuk{display:flex;justify-content:center;margin-bottom:22px}
+  .kartu-pengurus{background:#fff;border-radius:var(--radius);box-shadow:var(--bayang);padding:22px;text-align:center;width:230px;transition:.25s;border-top:4px solid var(--emas)}
+  .kartu-pengurus:hover{transform:translateY(-5px);box-shadow:var(--bayang-kuat)}
+  .kartu-pengurus .awalan{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--daun),var(--hutan));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:800;font-size:1.3rem;margin:0 auto 12px}
+  .kartu-pengurus h4,.kartu-pengurus .nm{color:var(--hutan-tua);font-size:1rem}
+  .kartu-pengurus .jabatan{color:var(--emas-tua);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin:4px 0 6px}
+  .kartu-pengurus .nama{color:var(--abu);font-size:.9rem;font-style:italic}
+  .baris-pengurus{display:flex;justify-content:center;gap:18px;flex-wrap:wrap}
+  .kartu-orang{display:flex;gap:24px;align-items:center;background:#fff;border-radius:20px;box-shadow:var(--bayang);padding:22px;max-width:640px;margin:0 auto;border-left:6px solid var(--daun);text-align:left;flex-wrap:wrap}
+  .kartu-orang img{width:150px;height:170px;object-fit:cover;border-radius:14px;flex-shrink:0}
+  .kartu-orang h4{color:var(--hutan-tua);font-size:1.15rem;margin-bottom:2px}
+  .kartu-orang .rimba{color:var(--emas-tua);font-weight:800;font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:8px}
+  .kartu-orang p{color:var(--abu);font-size:.88rem}
+  .catatan{background:#fff8e3;border:1px dashed var(--emas-tua);border-radius:12px;padding:14px 20px;font-size:.9rem;color:#7a5b12;text-align:center;max-width:700px;margin:28px auto 0}
+  .catatan ul{list-style:none;margin-top:6px}
+  .catatan li{margin:3px 0}
+
+  /* ===== BIDANG ===== */
+  .grid-bidang{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .kartu-bidang{background:#fff;border-radius:var(--radius);box-shadow:var(--bayang);padding:28px;transition:.25s;position:relative;overflow:hidden}
+  .kartu-bidang::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:linear-gradient(90deg,var(--daun),var(--emas))}
+  .kartu-bidang:hover{transform:translateY(-6px);box-shadow:var(--bayang-kuat)}
+  .kartu-bidang .ikon{width:54px;height:54px;border-radius:14px;background:linear-gradient(135deg,rgba(26,107,74,.12),rgba(247,201,72,.18));display:flex;align-items:center;justify-content:center;margin-bottom:16px;font-size:1.6rem}
+  .kartu-bidang h4{color:var(--hutan-tua);font-size:1.08rem;margin-bottom:8px}
+  .kartu-bidang p{color:var(--abu);font-size:.92rem}
+
+  /* ===== REKAN SEJALAN (mitra) ===== */
+  .grid-mitra{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .kartu-mitra{background:#fff;border-radius:var(--radius);box-shadow:var(--bayang);padding:30px;transition:.25s;
+    border:2px dashed rgba(26,107,74,.35);display:flex;gap:22px;align-items:center;text-align:left}
+  .kartu-mitra:hover{transform:translateY(-5px);border-style:solid;border-color:var(--daun)}
+  .kartu-mitra .ikon{flex:none;width:62px;height:62px;border-radius:50%;background:linear-gradient(135deg,rgba(24,60,94,.13),rgba(247,201,72,.18));display:flex;align-items:center;justify-content:center;font-size:1.8rem}
+  .kartu-mitra h4{color:var(--hutan-tua);font-size:1.05rem;margin-bottom:6px}
+  .kartu-mitra p{color:var(--abu);font-size:.9rem}
+  .kartu-mitra .rel{display:inline-block;margin-top:10px;font-size:.72rem;font-weight:800;letter-spacing:.06em;
+    text-transform:uppercase;color:var(--emas-tua);background:rgba(247,201,72,.14);border:1px solid rgba(247,201,72,.4);border-radius:999px;padding:4px 12px}
+  @media(max-width:960px){.grid-mitra{grid-template-columns:1fr}}
+
+  /* ===== PROGRAM ===== */
+  .program-sec{background:var(--hutan-tua);color:#fff}
+  .program-sec .kepala-sec h2{color:#fff}
+  .program-sec .kepala-sec p{color:#b9d4c5}
+  .program-sec .subjudul-sec{color:#fff}
+  .program-sec .subjudul-sec small{color:#b9d4c5}
+  .grid-prog{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .kartu-prog{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:var(--radius);padding:26px;transition:.25s}
+  .kartu-prog:hover{background:rgba(255,255,255,.10);transform:translateY(-4px);border-color:rgba(247,201,72,.5)}
+  .kartu-prog .nomor{font-family:'Archivo',sans-serif;font-weight:900;font-size:2.4rem;color:rgba(247,201,72,.4);line-height:1}
+  .kartu-prog h4{color:var(--emas);font-size:1.05rem;margin:10px 0 8px}
+  .kartu-prog p{color:#cfe3d7;font-size:.9rem}
+
+  /* ===== BERITA ===== */
+  .grid-berita{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .kartu-berita{background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:var(--bayang);transition:.25s;display:flex;flex-direction:column}
+  .kartu-berita:hover{transform:translateY(-6px);box-shadow:var(--bayang-kuat)}
+  .kartu-berita .thumb{height:180px;background-size:cover;background-position:center;position:relative}
+  .kartu-berita .thumb .label{position:absolute;top:14px;left:14px;background:linear-gradient(135deg,var(--navi),#21507a);color:#eaf4ee;border:1px solid rgba(24,120,192,.55);font-size:.72rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:5px 12px;border-radius:99px}
+  .kartu-berita .isi{padding:22px;flex:1;display:flex;flex-direction:column}
+  .kartu-berita .tgl{color:var(--abu);font-size:.8rem;font-weight:600;margin-bottom:8px}
+  .kartu-berita h4{color:var(--hutan-tua);font-size:1.05rem;margin-bottom:10px}
+  .kartu-berita p{color:var(--abu);font-size:.9rem;flex:1}
+  .kartu-berita .baca{margin-top:16px;font-weight:700;font-size:.88rem;color:var(--daun);display:inline-flex;gap:6px;align-items:center;transition:.25s}
+  .kartu-berita .baca:hover{gap:10px;color:var(--langit)}
+  .kabar-strip{margin-top:30px;background:#fff;border:1px solid #e3ece6;border-left:6px solid var(--emas);border-radius:14px;padding:18px 24px;box-shadow:var(--bayang);font-size:.92rem;color:var(--abu)}
+  .kabar-strip b{color:var(--hutan-tua)}
+  .kabar-strip .item{padding:9px 0;border-bottom:1px dashed #e3ece6}
+  .kabar-strip .item:last-child{border-bottom:none}
+  .kabar-strip .sumber{font-size:.78rem;color:#8aa096}
+
+  /* ===== GALERI ===== */
+  .galeri-sec{background:linear-gradient(180deg,#eef5ef,var(--kertas))}
+  .grid-galeri{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+  .galeri-sec figure{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;box-shadow:var(--bayang);aspect-ratio:4/3;background:#dfe9e2}
+  .galeri-sec figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+  .galeri-sec figure:hover img{transform:scale(1.08)}
+  .galeri-sec figcaption{position:absolute;left:0;right:0;bottom:0;padding:26px 16px 12px;color:#fff;font-weight:600;font-size:.88rem;background:linear-gradient(transparent,rgba(10,46,36,.92))}
+  .badge-arsip{position:absolute;top:12px;right:12px;background:linear-gradient(135deg,var(--lava),#b52c14);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:4px 11px;border-radius:99px;z-index:2;box-shadow:0 4px 10px rgba(0,0,0,.25)}
+  .arsip-note{margin-top:18px;font-size:.82rem;color:var(--abu);text-align:center}
+  .lightbox{position:fixed;inset:0;background:rgba(5,25,18,.94);z-index:2000;display:none;align-items:center;justify-content:center;flex-direction:column;padding:24px}
+  .lightbox.tampil{display:flex}
+  .lightbox img{max-width:92vw;max-height:80vh;border-radius:12px;box-shadow:0 25px 60px rgba(0,0,0,.5)}
+  .lightbox .ket{color:#dcece2;margin-top:14px;font-weight:600;text-align:center;max-width:760px}
+  .lightbox .tutup{position:absolute;top:18px;right:26px;background:none;border:none;color:#fff;font-size:2.6rem;cursor:pointer;line-height:1;opacity:.8}
+  .lightbox .tutup:hover{opacity:1}
+
+  /* ===== BERGABUNG ===== */
+  .grid-join{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:start}
+  .langkah{display:flex;gap:16px;margin-bottom:22px}
+  .langkah .no{flex-shrink:0;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--daun),var(--hutan));color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Archivo',sans-serif;font-weight:800;box-shadow:0 6px 14px rgba(26,107,74,.3)}
+  .langkah h4{color:var(--hutan-tua);font-size:1.02rem;margin-bottom:4px}
+  .langkah p{color:var(--abu);font-size:.92rem}
+  .syarat{background:var(--hutan-tua);color:#dcece2;border-radius:var(--radius);padding:24px 26px;margin-top:8px}
+  .syarat h4{color:var(--emas);margin-bottom:12px;font-family:'Archivo',sans-serif}
+  .syarat li{margin-left:18px;margin-bottom:8px;font-size:.93rem}
+  form.kartu{background:#fff;border-radius:20px;box-shadow:var(--bayang-kuat);padding:34px;border-top:6px solid var(--emas)}
+  form.kartu h3{color:var(--hutan-tua);font-size:1.3rem;margin-bottom:6px}
+  form.kartu .deskripsi{color:var(--abu);font-size:.9rem;margin-bottom:22px}
+  .field{margin-bottom:16px}
+  .field label{display:block;font-weight:700;font-size:.86rem;color:var(--hutan-tua);margin-bottom:6px}
+  .field input,.field select,.field textarea{width:100%;padding:12px 14px;border:2px solid #dfe9e2;border-radius:10px;font-family:inherit;font-size:.95rem;background:#fbfdfc;transition:.2s}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--daun);box-shadow:0 0 0 4px rgba(26,107,74,.12)}
+  form.kartu .btn{width:100%;justify-content:center}
+  form.kartu .catatan-form{font-size:.78rem;color:var(--abu);text-align:center;margin-top:12px}
+
+  /* ===== KONTAK ===== */
+  .kontak-sec{background:linear-gradient(180deg,var(--kertas),#e9f2ec)}
+  .grid-kontak{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .kartu-kontak{background:#fff;border-radius:var(--radius);box-shadow:var(--bayang);padding:28px;text-align:center;transition:.25s}
+  .kartu-kontak:hover{transform:translateY(-5px)}
+  .kartu-kontak .ikon{width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,rgba(26,107,74,.12),rgba(247,201,72,.2));display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin:0 auto 14px}
+  .kartu-kontak h4{color:var(--hutan-tua);margin-bottom:6px;font-size:1.02rem}
+  .kartu-kontak p{color:var(--abu);font-size:.92rem}
+  .kartu-kontak a{font-weight:700}
+  .peta{margin-top:30px;border-radius:20px;overflow:hidden;box-shadow:var(--bayang-kuat);border:1px solid #dfe9e2}
+  .peta iframe{width:100%;height:330px;border:0;display:block;filter:saturate(.85) contrast(1.02)}
+
+  /* ===== FOOTER ===== */
+  footer{background:var(--hutan-tua);color:#b9d4c5;padding:54px 0 0}
+  .grid-footer{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:32px;padding-bottom:40px}
+  .grid-footer .brand{display:flex;gap:14px;align-items:center;margin-bottom:16px}
+  .grid-footer .brand img{height:56px;width:auto}
+  .grid-footer .brand b{color:#fff;font-family:'Archivo',sans-serif;font-size:1.2rem;display:block}
+  .grid-footer .brand small{color:var(--emas);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700}
+  .grid-footer p{font-size:.9rem}
+  .grid-footer h5{color:#fff;font-family:'Archivo',sans-serif;font-size:.95rem;margin-bottom:14px;text-transform:uppercase;letter-spacing:.08em}
+  .grid-footer ul{list-style:none}
+  .grid-footer ul li{margin-bottom:9px}
+  .grid-footer ul a{color:#b9d4c5;font-size:.9rem;transition:.2s}
+  .grid-footer ul a:hover{color:var(--emas);padding-left:4px}
+  .bawah-footer{border-top:1px solid rgba(255,255,255,.12);padding:18px 0;text-align:center;font-size:.84rem;color:#8fb3a1}
+  .bawah-footer b{color:var(--emas)}
+
+  /* ===== REVEAL ===== */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.muncul{opacity:1;transform:none}
+
+  /* ===== RESPONSIF ===== */
+  @media(max-width:960px){
+    .grid-profil,.grid-join{grid-template-columns:1fr}
+    .grid-bidang,.grid-prog,.grid-berita,.grid-galeri,.grid-kontak{grid-template-columns:repeat(2,1fr)}
+    .grid-footer{grid-template-columns:1fr 1fr}
+  }
+  /* nav lipat ke burger mulai ≤1160px — 12 link tak muat di lebar 641–1160px (QA sesi 18) */
+  @media(max-width:1160px){
+    .menu{position:fixed;top:72px;left:0;right:0;background:rgba(10,46,36,.98);flex-direction:column;align-items:stretch;padding:16px 20px 24px;gap:4px;transform:translateY(-140%);transition:.35s;box-shadow:0 20px 40px rgba(0,0,0,.3)}
+    .menu.tampil{transform:none}
+    .menu a{padding:12px 14px}
+    .menu .btn-join{margin-left:0;text-align:center;justify-content:center;display:flex}
+    .burger{display:block}
+  }
+  @media(max-width:640px){
+    .grid-bidang,.grid-prog,.grid-berita,.grid-galeri,.grid-kontak{grid-template-columns:1fr}
+    .hero .angka{grid-template-columns:1fr 1fr}
+    .grid-footer{grid-template-columns:1fr}
+    section{padding:64px 0}
+    .kartu-orang{flex-direction:column;text-align:center}
+  }
+
+  .grid-naungan{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:8px}
+  .kartu-naungan{background:#fff;border-radius:var(--radius);box-shadow:var(--bayang);padding:20px;border-top:4px solid var(--navi)}
+  .kartu-naungan .jenjang{display:inline-block;background:var(--navi);color:#fff;font-family:'Archivo',sans-serif;font-weight:800;font-size:.68rem;letter-spacing:.14em;border-radius:6px;padding:4px 10px}
+  .kartu-naungan h4{color:var(--hutan-tua);margin:10px 0 4px;font-size:.98rem}
+  .kartu-naungan .npsn{font-size:.74rem;color:var(--abu);font-weight:700;letter-spacing:.06em}
+  .kartu-naungan p:last-child{font-size:.82rem;color:var(--abu);margin-top:6px}
+  @media(max-width:960px){.grid-naungan{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:640px){.grid-naungan{grid-template-columns:1fr}}
+  /* ===== POLESAN P0/P1 + SPLASH (sesi 18) ===== */
+  .skip-link{position:fixed;left:14px;top:-64px;z-index:4000;background:var(--navi);color:#fff;padding:10px 16px;border-radius:0 0 10px 10px;font-weight:700;text-decoration:none;transition:top .25s}
+  .skip-link:focus{top:0}
+  :focus-visible{outline:3px solid var(--emas);outline-offset:2px;border-radius:4px}
+  .lb-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.25);color:#fff;font-size:2rem;line-height:1;width:52px;height:52px;border-radius:50%;cursor:pointer;transition:.2s;z-index:2}
+  .lb-nav:hover{background:rgba(255,255,255,.2)}
+  .lb-prev{left:18px}.lb-next{right:18px}
+  @media(max-width:640px){.lb-nav{width:40px;height:40px;font-size:1.5rem}.lb-prev{left:8px}.lb-next{right:8px}}
+  #ke-atas{position:fixed;right:22px;bottom:92px;z-index:1200;display:flex;flex-direction:column;align-items:center;gap:2px;background:linear-gradient(180deg,#8a5a33,#6f4626);color:#f7e9d2;border:none;border-radius:10px;padding:10px 14px;cursor:pointer;box-shadow:0 10px 24px rgba(0,0,0,.28);opacity:0;pointer-events:none;transform:translateY(14px);transition:.3s}
+  #ke-atas.muncul{opacity:1;pointer-events:auto;transform:none}
+  #ke-atas .panah{font-size:1rem;line-height:1}
+  #ke-atas small{font-size:.62rem;letter-spacing:.14em;font-weight:700}
+  /* ===== ASISTEN ARIYAPALA (sesi 21) — tanya jawab client-side ===== */
+  #asisten-fab{position:fixed;right:22px;bottom:22px;z-index:1250;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;width:60px;height:60px;border-radius:50%;border:2px solid rgba(247,201,72,.55);cursor:pointer;background:linear-gradient(160deg,var(--daun),var(--hutan-tua));color:var(--emas);box-shadow:0 12px 28px rgba(13,59,46,.38);transition:transform .25s}
+  #asisten-fab:hover{transform:scale(1.07)}
+  #asisten-fab svg{width:24px;height:24px}
+  #asisten-fab .as-nama{font-family:'Archivo',sans-serif;font-size:.52rem;font-weight:800;letter-spacing:.1em;color:#dcecdf;margin-top:1px}
+  #asisten-panel{position:fixed;right:22px;bottom:94px;z-index:1260;width:min(400px,calc(100vw - 28px));height:min(560px,calc(100dvh - 140px));background:var(--kertas);border:1px solid rgba(13,59,46,.16);border-radius:18px;box-shadow:var(--bayang-kuat);display:none;flex-direction:column;overflow:hidden}
+  #asisten-panel.buka{display:flex;animation:as-muncul .28s cubic-bezier(.2,.9,.3,1.1)}
+  @keyframes as-muncul{from{opacity:0;transform:translateY(16px) scale(.97)}to{opacity:1;transform:none}}
+  .as-kepala{background:linear-gradient(135deg,var(--hutan),var(--hutan-tua));color:#fff;padding:13px 15px;display:flex;align-items:center;gap:11px;flex:none}
+  .as-kepala img{width:40px;height:40px;border-radius:50%;background:#fff;padding:2px;object-fit:contain;flex:none}
+  .as-kepala h3{margin:0;font-size:.98rem;color:#fff}
+  .as-kepala p{margin:2px 0 0;font-size:.68rem;color:#bcd6c8;line-height:1.4}
+  .as-tutup{margin-left:auto;background:rgba(255,255,255,.12);border:none;color:#fff;width:30px;height:30px;border-radius:8px;cursor:pointer;font-size:.95rem;flex:none}
+  .as-tutup:hover{background:rgba(255,255,255,.25)}
+  .as-chat{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:linear-gradient(180deg,#eef5ef,var(--kertas))}
+  .as-pesan{max-width:86%;padding:10px 13px;border-radius:14px;font-size:.84rem;line-height:1.55}
+  .as-pesan.bot{align-self:flex-start;background:#fff;border:1px solid rgba(13,59,46,.12);border-bottom-left-radius:4px;color:#22352d;box-shadow:0 2px 8px rgba(13,59,46,.06)}
+  .as-pesan.user{align-self:flex-end;background:linear-gradient(135deg,var(--daun),var(--hutan));color:#fff;border-bottom-right-radius:4px}
+  .as-buka{display:inline-block;margin-top:8px;background:var(--hutan);color:#fff;padding:6px 12px;border-radius:8px;font-size:.74rem;text-decoration:none;font-weight:700;font-family:'Archivo',sans-serif}
+  .as-buka:hover{background:var(--daun)}
+  .as-ketik{align-self:flex-start;background:#fff;border:1px solid rgba(13,59,46,.12);border-radius:14px;border-bottom-left-radius:4px;padding:12px 14px;display:flex;gap:5px}
+  .as-ketik i{width:7px;height:7px;border-radius:50%;background:var(--abu);animation:as-titik 1s infinite}
+  .as-ketik i:nth-child(2){animation-delay:.15s}
+  .as-ketik i:nth-child(3){animation-delay:.3s}
+  @keyframes as-titik{0%,60%,100%{transform:translateY(0);opacity:.4}30%{transform:translateY(-5px);opacity:1}}
+  .as-chips{display:flex;flex-wrap:wrap;gap:6px;padding:0 14px 10px;background:var(--kertas)}
+  .as-chips button{background:#fff;border:1px solid var(--daun);color:var(--hutan-terang);border-radius:999px;padding:6px 12px;font-size:.72rem;font-weight:700;cursor:pointer;font-family:inherit}
+  .as-chips button:hover{background:var(--daun);color:#fff}
+  .as-form{display:flex;gap:8px;padding:12px 14px;border-top:1px solid rgba(13,59,46,.1);background:#fff;flex:none}
+  .as-form input{flex:1;min-width:0;border:1.5px solid rgba(13,59,46,.18);border-radius:10px;padding:10px 12px;font:inherit;font-size:.84rem;background:var(--kertas);color:#22352d}
+  .as-form input:focus{outline:none;border-color:var(--daun);box-shadow:0 0 0 3px rgba(26,107,74,.15)}
+  .as-form button{background:linear-gradient(135deg,var(--emas),var(--emas-tua));border:none;border-radius:10px;width:44px;cursor:pointer;color:var(--hutan-tua);font-size:1.05rem;font-weight:900;flex:none}
+  .as-form button:hover{filter:brightness(1.06)}
+  body.asisten-buka #ke-atas{opacity:0 !important;pointer-events:none !important;transform:translateY(14px)}
+  @media(max-width:640px){
+    #asisten-panel{right:10px;left:10px;bottom:84px;width:auto;height:min(540px,calc(100dvh - 108px))}
+    #asisten-fab{right:16px;bottom:16px;width:54px;height:54px}
+    #asisten-fab svg{width:21px;height:21px}
+    #ke-atas{right:16px;bottom:82px;padding:8px 11px}
+  }
+  #progres{position:fixed;top:0;left:0;right:0;height:3px;z-index:1600;pointer-events:none}
+  #progres-isi{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--emas),var(--lava));position:relative}
+  #progres-isi::after{content:"\25B2";position:absolute;right:-3px;top:2px;font-size:9px;color:var(--emas)}
+  /* ===== TAUTAN ACARA (kunci admin: form_acara · kalender_acara) ===== */
+  .tautan-acara{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:8px 0 6px}
+  .tautan-acara:empty{display:none}
+  .btn-tautan-acara{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--emas),var(--emas-tua));color:var(--hutan-tua);font-family:'Archivo',sans-serif;font-weight:800;font-size:.84rem;letter-spacing:.02em;padding:12px 18px;border-radius:10px;text-decoration:none;box-shadow:0 8px 20px rgba(13,59,46,.18);transition:transform .2s,filter .2s}
+  .btn-tautan-acara:hover{transform:translateY(-2px);filter:brightness(1.06)}
+  @media(max-width:640px){.btn-tautan-acara{width:100%;justify-content:center}}
+  .rambu{display:flex;flex-direction:column;align-items:center;margin:34px 0 -6px;position:relative;z-index:4}
+  .rambu .papan{background:linear-gradient(180deg,#8a5a33,#6f4626);color:#f7e9d2;font-family:'Archivo',sans-serif;font-weight:700;letter-spacing:.16em;font-size:.74rem;padding:8px 18px;border-radius:6px;box-shadow:0 6px 16px rgba(0,0,0,.25),inset 0 1px 0 rgba(255,255,255,.18);transform:rotate(-1.4deg)}
+  .rambu .tiang{width:9px;height:24px;background:linear-gradient(180deg,#6f4626,#5a3a20);border-radius:0 0 3px 3px}
+  #splash{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;flex-direction:column;background:radial-gradient(120vmax 70vmax at 50% 118%,#14352a 0%,#0e2438 52%,#0a1a2a 100%);overflow:hidden;text-align:center;padding:24px}
+  #splash.aktif{display:flex}
+  #splash::before{content:"";position:absolute;inset:0;opacity:.09;pointer-events:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='900' height='540' fill='none' stroke='%232f5d49' stroke-width='1.3' opacity='.06'%3E%3Cpath d='M0 60 Q225 20 450 60 T900 60'/%3E%3Cpath d='M0 150 Q225 200 450 150 T900 150'/%3E%3Cpath d='M0 240 Q225 210 450 240 T900 240'/%3E%3Cpath d='M0 330 Q225 380 450 330 T900 330'/%3E%3Cpath d='M0 420 Q225 395 450 420 T900 420'/%3E%3Cpath d='M0 500 Q225 535 450 500 T900 500'/%3E%3Cpath d='M0 100 Q225 60 450 100 T900 100' stroke-width='.8'/%3E%3Cpath d='M0 390 Q225 350 450 390 T900 390' stroke-width='.8'/%3E%3Cellipse cx='150' cy='300' rx='52' ry='26' stroke-width='.9'/%3E%3Cellipse cx='150' cy='300' rx='26' ry='12' stroke-width='.9'/%3E%3Cellipse cx='705' cy='90' rx='60' ry='28' stroke-width='.9'/%3E%3Cellipse cx='705' cy='90' rx='30' ry='13' stroke-width='.9'/%3E%3C/svg%3E")}
+  #splash .jalur-svg{width:min(430px,72vw);height:auto;overflow:visible}
+  #splash .jalur-svg .garis{fill:none;stroke:var(--emas);stroke-width:3;stroke-linecap:round;stroke-dasharray:640;stroke-dashoffset:640;animation:s-jalan 1.15s ease-out .15s forwards}
+  #splash .jalur-svg .bendera{opacity:0;transform-origin:462px 52px;animation:s-pop .45s cubic-bezier(.2,1.4,.4,1) 1.25s forwards}
+  #splash-logo{opacity:0;transform:translateY(30px) scale(.9);width:min(300px,58vw);height:auto;filter:drop-shadow(0 14px 34px rgba(0,0,0,.45));animation:s-naik .75s cubic-bezier(.2,.9,.3,1.15) 1.45s forwards,s-glow 1.1s ease-in-out 2.3s 1}
+  #splash-tagline{color:#dce8f4;font-family:'Archivo',sans-serif;letter-spacing:.06em;font-size:clamp(.85rem,2.4vw,1.05rem);opacity:0;animation:s-fade .7s ease 2.25s forwards;margin-top:12px}
+  #splash-lewat{position:absolute;bottom:26px;left:50%;transform:translateX(-50%);background:none;border:1px solid rgba(255,255,255,.35);color:#cfe0ee;border-radius:999px;padding:8px 22px;font-size:.8rem;letter-spacing:.12em;cursor:pointer;opacity:0;animation:s-fade .5s ease 1.7s forwards}
+  #splash-lewat:hover{background:rgba(255,255,255,.12)}
+  #splash.bubar{opacity:0;transition:opacity .5s ease}
+  @keyframes s-jalan{to{stroke-dashoffset:0}}
+  @keyframes s-pop{from{opacity:0;transform:scale(.2)}to{opacity:1;transform:scale(1)}}
+  @keyframes s-naik{to{opacity:1;transform:none}}
+  @keyframes s-fade{to{opacity:1}}
+  @keyframes s-glow{0%,100%{filter:drop-shadow(0 14px 34px rgba(0,0,0,.45))}45%{filter:drop-shadow(0 0 34px rgba(249,181,42,.55)) drop-shadow(0 14px 34px rgba(0,0,0,.4))}}
+  footer{position:relative;overflow:hidden}
+  .bara-wadah{position:absolute;inset:0;pointer-events:none}
+  .bara-wadah i{position:absolute;bottom:-6px;width:4px;height:4px;border-radius:50%;background:radial-gradient(circle at 35% 35%,#ffd97a,var(--lava));opacity:0;animation:b-naik linear infinite}
+  .bara-wadah i:nth-child(1){left:5%;animation-duration:7s;animation-delay:.3s}
+  .bara-wadah i:nth-child(2){left:14%;animation-duration:8.5s;animation-delay:1.6s;width:3px;height:3px}
+  .bara-wadah i:nth-child(3){left:24%;animation-duration:6.4s;animation-delay:2.8s}
+  .bara-wadah i:nth-child(4){left:33%;animation-duration:9s;animation-delay:.9s;width:5px;height:5px}
+  .bara-wadah i:nth-child(5){left:42%;animation-duration:7.6s;animation-delay:3.4s}
+  .bara-wadah i:nth-child(6){left:51%;animation-duration:6.8s;animation-delay:1.1s;width:3px;height:3px}
+  .bara-wadah i:nth-child(7){left:60%;animation-duration:8.2s;animation-delay:4.2s}
+  .bara-wadah i:nth-child(8){left:69%;animation-duration:7.2s;animation-delay:2.2s;width:5px;height:5px}
+  .bara-wadah i:nth-child(9){left:78%;animation-duration:9.4s;animation-delay:.5s}
+  .bara-wadah i:nth-child(10){left:86%;animation-duration:6.6s;animation-delay:3.9s;width:3px;height:3px}
+  .bara-wadah i:nth-child(11){left:93%;animation-duration:8.8s;animation-delay:1.9s}
+  .bara-wadah i:nth-child(12){left:47%;animation-duration:7.9s;animation-delay:5s;width:3px;height:3px}
+  @keyframes b-naik{0%{transform:translateY(0);opacity:0}12%{opacity:.7}100%{transform:translateY(-170px) translateX(16px);opacity:0}}
+  @media (max-height:520px){
+    #splash .jalur-svg{width:min(240px,44vw)}
+    #splash-logo{width:min(170px,34vw)}
+    #splash-tagline{font-size:.75rem;margin-top:6px}
+    #splash-lewat{bottom:10px;padding:6px 16px}
+  }
+  @media (prefers-reduced-motion: reduce){#splash.aktif{display:none}.bara-wadah{display:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#profil">Lewati ke konten</a>
+<div id="progres" aria-hidden="true"><span id="progres-isi"></span></div>
+<div id="splash">
+  <svg class="jalur-svg" viewBox="0 0 520 220" aria-hidden="true">
+    <path class="garis" pathLength="640" d="M20 200 C 90 170, 120 205, 190 165 S 300 120, 350 95 S 430 70, 462 52"/>
+    <g class="bendera"><line x1="462" y1="52" x2="462" y2="26" stroke="#f7e9d2" stroke-width="3"/><path d="M462 26 l26 7 -26 7 z" fill="#dc3a23"/></g>
+  </svg>
+  <img id="splash-logo" src="images/logo-hidup-320.webp" alt="" width="320" height="243">
+  <p id="splash-tagline">Aliansi Rimba Pecinta Alam — sejak 2001 di Cintawana</p>
+  <button id="splash-lewat" type="button">LEWATI ›</button>
+</div>
+
+
+<!-- ================= NAVBAR ================= -->
+<header id="header">
+  <div class="wadah nav">
+    <a class="brand" href="#beranda">
+      <img src="images/logo-hidup-160.webp" alt="Logo ARIYAPALA" style="height:52px;width:auto" width="160" height="121">
+      <span>ARIYAPALA<small>Aliansi Rimba Pecinta Alam</small></span>
+    </a>
+    <button class="burger" id="burger" aria-label="Buka menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu" id="menu">
+      <li><a href="#beranda">Beranda</a></li>
+      <li><a href="#profil">Profil</a></li>
+      <li><a href="#sejarah">Sejarah</a></li>
+      <li><a href="#struktur">Struktur</a></li>
+      <li><a href="#angkatan">Kader</a></li>
+      <li><a href="#bidang">Bidang</a></li>
+      <li><a href="#program">Program</a></li>
+      <li><a href="#berita">Berita</a></li>
+      <li><a href="#galeri">Galeri</a></li>
+      <li><a href="#mitra">Rekan</a></li>
+      <li><a href="#kontak">Kontak</a></li>
+      <li><a href="#bergabung" class="btn-join">Bergabung</a></li>
+    </ul>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="beranda">
+  <div class="wadah">
+    <span class="tag">⛰ Salam Rimba — Sejak 2001</span>
+    <h1>ARIYAPALA<br><span class="kuning">Aliansi Rimba</span> Pecinta Alam</h1>
+    <p class="sub">Lembaga pecinta alam Yayasan Pesantren Cintawana &amp; SMK YPC yang berdiri sejak 7 Januari 2001 — merawat kecintaan pada alam, menumbuhkan jiwa petualang, dan mengabdi untuk lingkungan.</p>
+    <p class="lokasi">📍 Komplek Pondok Pesantren Cintawana, Desa Cikunten, Singaparna, Kab. Tasikmalaya, Jawa Barat</p>
+    <div class="cta">
+      <a href="#profil" class="btn btn-emas">Kenali Kami</a>
+      <a href="#bergabung" class="btn btn-ghost">Bergabung Sekarang</a>
+    </div>
+    <div class="angka">
+      <div class="kotak"><b>7 Jan 2001</b><span>Hari berdiri — di Yayasan Pesantren Cintawana, Singaparna</span></div>
+      <div class="kotak"><b>28+</b><span>Angkatan Diklatsar terdokumentasi (hingga Angkatan 28, 2017)</span></div>
+      <div class="kotak"><b>50+</b><span>Anggota aktif tercatat pada 2008, lintas SMP–SMA–SMK YPC</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROFIL ================= -->
+<section class="wm wm-kanan" id="profil">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Tentang Kami</span>
+      <h2>Profil Organisasi</h2>
+      <p>Keluarga besar pecinta alam yang tumbuh bersama pesantren tertua di Priangan.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="grid-profil">
+      <div class="foto reveal">
+        <img src="images/about.jpg" alt="Tim ARIYAPALA di puncak gunung" width="1264" height="848">
+      </div>
+      <div class="reveal">
+        <h3>Dari “Aliansi Simba” Menjadi ARIYAPALA</h3>
+        <p>ARIYAPALA berdiri pada <b>7 Januari 2001</b> di Yayasan Pesantren Cintawana, Singaparna, Kabupaten Tasikmalaya, dengan nama awal <b>“Aliansi Simba Pecinta Alam Yayasan Pesantren Cintawana”</b> — kini dikenal sebagai <b>ARIYAPALA: Aliansi Rimba Pecinta Alam</b>. Organisasi ini diprakarsai empat perintis bersama pembina mereka, <b>Helmi Ahmad M Farid, A.Md</b> (Nama Rimba: <b>XENZOE</b>).</p>
+        <p>Anggotanya adalah para siswa di lingkungan yayasan — <b>SMP, SMA, dan SMK YPC</b> — serta santri Pondok Pesantren Cintawana, pesantren salaf tertua di Priangan yang didirikan <b>KH Muhammad Toha pada 12 April 1917</b>. Karena itu ARIYAPALA hidup di dua akar sekaligus: <b>kepesantrenan</b> (iman, akhlak, kajian kitab kuning) dan <b>kegiatan rimba</b> (pendakian, perkemahan, penyelamatan, konservasi).</p>
+        <p>Pada 2008 organisasi telah menghasilkan <b>12 angkatan dengan 50+ anggota</b>, dan pada 2009 anggotanya menorehkan catatan langka: <b>menjejakkan kaki di puncak “Gunung Es” di Inggris</b> — satu-satunya dokumentasi organisasi asal Singaparna itu pada masanya.</p>
+        <div class="visi-misi">
+          <h4>Visi</h4>
+          <p>Menjadi organisasi pecinta alam yang unggul dalam prestasi, pioneer, berkarakter, dan peduli lingkungan — didasari IMTAQ, dihiasi Akhlakul Karimah, dan dibekali IPTEK.</p>
+          <h4>Misi</h4>
+          <ul>
+            <li>Menumbuhkan kecintaan dan kepedulian terhadap alam ciptaan Allah.</li>
+            <li>Melatih anggota menjadi petualang yang aman, terampil, dan bertanggung jawab.</li>
+            <li>Mengembangkan potensi fisik, mental, dan spiritual anggota.</li>
+            <li>Menjalin silaturahmi dan kerja sama antar pecinta alam daerah.</li>
+            <li>Mengabdi untuk pelestarian lingkungan dan pemberdayaan masyarakat.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="subjudul-sec reveal" style="margin-top:64px">Identitas Organisasi <small>(logo resmi: berkas asli hasil restorasi · bendera: berkas asli dari pengurus, apa adanya · naungan: berkas logo asli SMK YPC)</small></h3>
+    <div class="grid-identitas">
+      <div class="identitas-card reveal">
+        <div class="bidang terang"><img src="images/logo-glossy-640.webp" alt="Logo resmi ARIYAPALA versi modern" width="640" height="498"></div>
+        <h4>Logo Resmi — Versi Hidup</h4>
+        <p>Restorasi modern dari berkas asli: warna diperkaya, efek enamel mengilap, resolusi tinggi, latar transparan. Versi datar (navbar &amp; favicon) ada di <code>logo-ariyapala-hidup.png</code>; hasil restorasi murni: <code>logo-ariyapala.png</code>.</p>
+      </div>
+      <div class="identitas-card reveal">
+        <div class="bidang oranye"><img src="images/bendera-ariyapala-asli.jpg" alt="Bendera ARIYAPALA — berkas asli dari pengurus" width="640" height="640"></div>
+        <h4>Bendera Organisasi</h4>
+        <p>Berkas asli dari pengurus, dipakai apa adanya tanpa perubahan — termasuk latar oranye khasnya. Versi SVG hasil rekonstruksi lama (<code>bendera.svg</code>) tetap disimpan sebagai arsip.</p>
+      </div>
+      <div class="identitas-card reveal">
+        <div class="bidang"><img src="images/naungan-smk-ypc.gif" alt="Logo SMK YPC — Yayasan Pesantren Cintawana" width="284" height="250"></div>
+        <h4>Naungan — Yayasan Pesantren Cintawana</h4>
+        <p>Emblem yang tampil = emblem SMK YPC, satu dari empat satuan pendidikan yayasan: TK Islam · SMP · SMA Pesantren Cintawana · SMK YPC. Berkas asli dari blog resmi sekolah.</p>
+      </div>
+    </div>
+    <p class="arsip-note">Logo resmi diterima dari pengurus (2026) dan direstorasi untuk keperluan situs. Bendera memakai berkas asli kiriman pengurus — dipasang apa adanya sesuai arahan (tidak digambar ulang).</p>
+    <h3 class="subjudul-sec reveal" style="margin-top:56px">Satuan Pendidikan di Bawah Naungan <small>(register yayasan &amp; sekolah Kemendikbud — rincian sumber: LAPORAN-NAUNGAN.md)</small></h3>
+    <div class="grid-naungan">
+      <div class="kartu-naungan reveal"><span class="jenjang">TK</span><h4>TK Islam Cintawana</h4><p class="npsn">NPSN 20262202</p><p>Cikunten, Singaparna — terdaftar pada registri Dapodik PAUD.</p></div>
+      <div class="kartu-naungan reveal"><span class="jenjang">SMP</span><h4>SMP Pesantren Cintawana</h4><p class="npsn">NPSN 20210723</p><p>Sekolah formal pesantren sejak 1965.</p></div>
+      <div class="kartu-naungan reveal"><span class="jenjang">SMA</span><h4>SMA Pesantren Cintawana</h4><p class="npsn">NPSN 20210779</p><p>Berdiri 1970 · akreditasi A.</p></div>
+      <div class="kartu-naungan reveal"><span class="jenjang">SMK</span><h4>SMK YPC Tasikmalaya</h4><p class="npsn">NPSN 20210704</p><p>Berdiri 1998 · akreditasi A · 8 kompetensi keahlian.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= SEJARAH ================= -->
+<section class="linimasa wm wm-kiri" id="sejarah">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Perjalanan</span>
+      <h2>Jejak Langkah ARIYAPALA</h2>
+      <p>Tonggak-tonggak penting yang terekam dalam arsip blog organisasi (ariyapala.blogspot.com, 2008–2010) dan dokumentasi pasca-nya.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="jalur">
+      <div class="titik reveal">
+        <span class="thn">7 Januari 2001</span>
+        <h4>Organisasi Berdiri</h4>
+        <p>Empat perintis — <b>Aceng Abdul Aziz, Jajang Permana, Asep Hari</b> — bersama pembina <b>Helmi Ahmad M Farid (XENZOE)</b> mendirikan “Aliansi Simba Pecinta Alam Yayasan Pesantren Cintawana” di Komplek Ponpes Cintawana, Singaparna.</p>
+      </div>
+      <div class="titik reveal">
+        <span class="thn">2001</span>
+        <h4>Diklatsar Pertama &amp; Angkatan I “TENK BAJA”</h4>
+        <p>Pendidikan dan Latihan Dasar perdana berlangsung <b>4 hari 3 malam di Pegunungan Ciamis</b>, dibimbing para pecinta alam Kota Tasikmalaya: <b>GENTAR, DAMPAL, dan PITON</b>. Lahir <b>Angkatan I “Tenk Baja”</b> beranggota lima orang: Dadan Muhamad Ramdan, Winanto (Nama Rimba: Calong), Abdullah Starsky, Torikul Haq, dan Sudin.</p>
+      </div>
+      <div class="titik reveal">
+        <span class="thn">2008</span>
+        <h4>12 Angkatan, 50+ Anggota, Arsip Blog Dibuka</h4>
+        <p>Pertumbuhan pesat: 12 angkatan dengan lebih dari 50 anggota aktif lintas jenjang (SMP–SMA–SMK). Latihan gabungan &amp; outbond digelar bersama <b>PK PMII Kab. Tasikmalaya</b>; dokumentasi kegiatan dimulai di blog resmi <a href="https://ariyapala.blogspot.com/" target="_blank" rel="noopener">ariyapala.blogspot.com</a>. <img class="foto-titik" src="images/arsip/S2020157.JPG" alt="Latihan gabungan 2008" loading="lazy" width="1600" height="1200"></p>
+      </div>
+      <div class="titik reveal">
+        <span class="thn">2009</span>
+        <h4>Puncak “Gunung Es” di Inggris</h4>
+        <p>Sebuah catatan yang jarang: anggota ARIYAPALA berhasil mendaki hingga puncak <b>“Gunung Es” di Inggris</b> — satu-satunya dokumentasi organisasi dari era tersebut, tersimpan sebagai montase arsip bertajuk “Sejukkk Coyy”. <img class="foto-titik" src="images/arsip/Sejukkk_Coyy.jpg" alt="Montase pendakian Gunung Es 2009" loading="lazy" width="1024" height="768"></p>
+      </div>
+      <div class="titik reveal">
+        <span class="thn">13–14 September 2010</span>
+        <h4>MUBES II &amp; Identitas Baru</h4>
+        <p><b>Musyawarah Besar II</b> digelar di SMK YPC (administrasi Rp20.000/orang) untuk regenerasi kepengurusan. Momen ini juga merilis <b>kaos MUBES</b> dan <b>desain kaos organisasi baru</b> — Rp45.000, bahan Combet 20s. <img class="foto-titik" src="images/arsip/Kaos_Baru_3.jpg" alt="Desain kaos organisasi 2010" loading="lazy" width="766" height="377"></p>
+      </div>
+      <div class="titik reveal">
+        <span class="thn">2017</span>
+        <h4>Diklatsar Angkatan 28 — Gunung Golkar, Ciamis</h4>
+        <p>Pelatihan dasar <b>Angkatan ke-28</b> berlangsung di kawasan Gunung Golkar, Ciamis. Keseruannya terekam video: <a href="https://m.youtube.com/watch?v=bXeUP7XyJg4" target="_blank" rel="noopener">saksikan dokumentasinya →</a></p>
+      </div>
+      <div class="titik reveal">
+        <span class="thn">2026</span>
+        <h4>Reborn — Website Resmi &amp; Arsip Digital Aktif</h4>
+        <p>ARIYAPALA hadir kembali di panggung digital dengan website resmi dan galeri arsip hasil penyelamatan blog lama (17 pos, 2008–2010) — panggung baru bagi generasi penerus untuk terus berkarya di alam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STRUKTUR ================= -->
+<section class="wm wm-kanan" id="struktur">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Pimpinan Organisasi</span>
+      <h2>Struktur Kepengurusan</h2>
+      <p>Akar sejarah 2001 dan kepemimpinan periode berjalan.</p>
+      <div class="pemisah"></div>
+    </div>
+
+    <h3 class="subjudul-sec reveal">Pembina &amp; Perintis <small>(pendiri, 7 Januari 2001)</small></h3>
+    <div class="kartu-orang reveal">
+      <img src="images/arsip/Arpal_08_270.jpg" alt="Foto pembina XENZOE di pegunungan" width="1200" height="1600">
+      <div>
+        <h4>Helmi Ahmad M Farid, A.Md</h4>
+        <div class="rimba">Nama Rimba: XENZOE · Pembina</div>
+        <p>Lahir 12 Desember 1977. Guru di lingkungan Yayasan Pesantren Cintawana dan juga Pembina Pramuka. NTA Nomor Rimba: <b>01010201 PAC</b>. Admin blog arsip ariyapala.blogspot.com (2008–2010).</p>
+      </div>
+    </div>
+    <div class="baris-pengurus" style="margin-top:22px">
+      <div class="kartu-pengurus reveal">
+        <div class="awalan">AA</div>
+        <div class="jabatan">Perintis</div>
+        <h4 class="nm">Aceng Abdul Aziz</h4>
+      </div>
+      <div class="kartu-pengurus reveal">
+        <div class="awalan">JP</div>
+        <div class="jabatan">Perintis</div>
+        <h4 class="nm">Jajang Permana</h4>
+      </div>
+      <div class="kartu-pengurus reveal">
+        <div class="awalan">AH</div>
+        <div class="jabatan">Perintis</div>
+        <h4 class="nm">Asep Hari</h4>
+      </div>
+    </div>
+
+    <h3 class="subjudul-sec reveal">Angkatan I — “TENK BAJA” <small>(lulusan Diklatsar pertama, 2001)</small></h3>
+    <div class="baris-pengurus">
+      <div class="kartu-pengurus reveal"><div class="awalan">DR</div><div class="jabatan">Angkatan I</div><h4 class="nm">Dadan Muhamad Ramdan</h4></div>
+      <div class="kartu-pengurus reveal"><div class="awalan">W</div><div class="jabatan">Angkatan I</div><h4 class="nm">Winanto <i>“Calong”</i></h4></div>
+      <div class="kartu-pengurus reveal"><div class="awalan">AS</div><div class="jabatan">Angkatan I</div><h4 class="nm">Abdullah Starsky</h4></div>
+      <div class="kartu-pengurus reveal"><div class="awalan">TH</div><div class="jabatan">Angkatan I</div><h4 class="nm">Torikul Haq</h4></div>
+      <div class="kartu-pengurus reveal"><div class="awalan">S</div><div class="jabatan">Angkatan I</div><h4 class="nm">Sudin</h4></div>
+    </div>
+
+    <h3 class="subjudul-sec reveal">Formasi Kepengurusan <small>(struktur inti organisasi)</small></h3>
+    <div class="catatan reveal">
+      Di bawah binaan <b>Helmi Ahmad M. Farid “XENZOE”</b>, formasi inti — <b>Ketua Umum, Wakil, Sekretaris, Bendahara</b> beserta para <b>kepala bidang</b> — berjalan sesuai amanah Musyawarah Besar dan dikukuhkan melalui Surat Keputusan pengurus. Susunan formasi aktif dimutakhirkan melalui kanal resmi organisasi, termasuk lewat panel situs ini.
+    </div>
+  </div>
+</section>
+
+<!-- ================= ANGKATAN & ANGGOTA ================= -->
+<section class="wm wm-kanan" id="angkatan">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Buku Kader</span>
+      <h2>Angkatan &amp; Anggota</h2>
+      <p>Dari Angkatan I «Tenk Baja» sampai angkatan terakhir — setiap angkatan dengan ketuanya masing-masing, lengkap dengan foto bila tersedia.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div id="ang-root" class="reveal muncul"></div>
+    <p class="arsip-note">Daftar angkatan &amp; anggota dikelola sendiri oleh pengurus lewat panel admin (tab ANGKATAN &amp; ANGGOTA). Foto opsional — tanpa foto, kartu memakai inisial nama. Data lama dari blog arsip (2008–2010) dan berita angkatan dapat dimasukkan bertahap.</p>
+  </div>
+</section>
+
+<!-- ================= BIDANG ================= -->
+<section class="linimasa wm wm-kiri" id="bidang">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Organisasi</span>
+      <h2>Bidang Keorganisasian</h2>
+      <p>Setiap bidang mengasah keahlian masing-masing — seperti tim pendakian, setiap posisi punya fungsinya.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="grid-bidang">
+      <div class="kartu-bidang reveal">
+        <div class="ikon">🏔️</div>
+        <h4>Pendakian &amp; Ekspedisi</h4>
+        <p>Mengurus program pendakian, perizinan, perencanaan rute, dan keselamatan ekspedisi ke gunung-gunung Priangan dan Jawa Barat — meneladani jejak “Gunung Es” 2009.</p>
+      </div>
+      <div class="kartu-bidang reveal">
+        <div class="ikon">🚑</div>
+        <h4>Rescue &amp; Pertolongan Pertama (PRB)</h4>
+        <p>Melatih kemampuan evakuasi, pertolongan pertama pada kecelakaan (PPPK), dan penugasan siaga SAR bersama KSR dan PMI.</p>
+      </div>
+      <div class="kartu-bidang reveal">
+        <div class="ikon">📋</div>
+        <h4>Administrasi &amp; Keuangan</h4>
+        <p>Merapikan arsip organisasi, keuangan kegiatan dan kas, tata naskah, penerbitan NTA, serta laporan pertanggungjawaban — tradisi tertib sejak MUBES I.</p>
+      </div>
+      <div class="kartu-bidang reveal">
+        <div class="ikon">📸</div>
+        <h4>Media, Humas &amp; Dokumentasi</h4>
+        <p>Melanjutkan tradisi blog 2008–2010: website, media sosial, fotografi, videografi, dan publikasi kegiatan ARIYAPALA hari ini.</p>
+      </div>
+      <div class="kartu-bidang reveal">
+        <div class="ikon">💛</div>
+        <h4>Perlengkapan &amp; Kesejahteraan Anggota</h4>
+        <p>Mengurus inventaris (tas carrier, tenda, tali-temali, kaos organisasi) dan kesejahteraan anggota — penerus tradisi kaos Combet 20s sejak 2010.</p>
+      </div>
+      <div class="kartu-bidang reveal">
+        <div class="ikon">🌱</div>
+        <h4>Konservasi &amp; Pengabdian Lingkungan</h4>
+        <p>Aksi nyata untuk alam: penanaman pohon, pembersihan kawasan, edukasi lingkungan ke sekolah dan masyarakat — selaras gerakan hijau pesantren se-Cintawana.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PROGRAM ================= -->
+<section class="program-sec wm wm-besar" id="program">
+  <div class="rambu" aria-hidden="true"><span class="papan">▲ POS PROGRAM KERJA</span><span class="tiang"></span></div>
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Aktivitas</span>
+      <h2>Program Kerja</h2>
+      <p>Enam pilar kegiatan yang menjaga ARIYAPALA terus bergerak — dari Angkatan I “Tenk Baja” sampai angkatan ke-28 dan seterusnya.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="grid-prog">
+      <div class="kartu-prog reveal">
+        <div class="nomor">01</div>
+        <h4>Open Recruitment &amp; Diklatsar</h4>
+        <p>Penerimaan anggota baru setiap tahun: seleksi, Diklatsar, hingga pelantikan anggota dengan penerbitan NTA — tradisi 4 hari 3 malam yang berlanjut sejak Ciamis 2001.</p>
+      </div>
+      <div class="kartu-prog reveal">
+        <div class="nomor">02</div>
+        <h4>Latihan Keterampilan Alam</h4>
+        <p>Latihan rutin: navigasi darat, map &amp; compass, tali-temali &amp; panjat tebing, survival, dan manuver medan — pernah dipertandingkan pula lewat “Rotation of Calong”.</p>
+      </div>
+      <div class="kartu-prog reveal">
+        <div class="nomor">03</div>
+        <h4>Pendakian &amp; Ekspedisi</h4>
+        <p>Program pendakian berkala ke gunung-gunung Priangan dan Jawa Barat, serta ekspedisi tematik yang menargetkan prestasi lintas daerah seperti catatan 2009.</p>
+      </div>
+      <div class="kartu-prog reveal">
+        <div class="nomor">04</div>
+        <h4>Kursus Rescue &amp; Siaga SAR</h4>
+        <p>Kursus Pertolongan Pertama pada Kecelakaan (KPPK) dan penugasan siaga bersama tim SAR/PMI — pernah ditempa lewat latihan gabungan lintas organisasi.</p>
+      </div>
+      <div class="kartu-prog reveal">
+        <div class="nomor">05</div>
+        <h4>Pengabdian &amp; Konservasi</h4>
+        <p>Bersih-bersih kawasan, penghijauan, edukasi lingkungan ke sekolah dan pesantren — sejalan dengan gerakan tanam pohon keluarga besar Cintawana.</p>
+      </div>
+      <div class="kartu-prog reveal">
+        <div class="nomor">06</div>
+        <h4>Lomba &amp; Silaturahmi</h4>
+        <p>Ikut serta dalam LKPA (Lomba Keterampilan Pecinta Alam), latgab antar-Mapala, dan kunjungan silaturahmi pecinta alam se-Tasikmalaya dan Priangan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= BERITA ================= -->
+<section class="wm wm-kanan" id="berita">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Kabar Rimba</span>
+      <h2>Berita &amp; Kabar Terbaru</h2>
+      <p>Kabar dari ARIYAPALA dan keluarga besar Yayasan Pesantren Cintawana.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="grid-berita">
+      <article class="kartu-berita reveal">
+        <div class="thumb" style="background-image:url('images/hero.jpg')">
+          <span class="label">Pengumuman</span>
+        </div>
+        <div class="isi">
+          <div class="tgl">📅 September 2026</div>
+          <h4>ARIYAPALA Hadirkan Website Resmi Baru</h4>
+          <p>Setelah lama vakum dari panggung digital, ARIYAPALA hadir kembali dengan website resmi — memuat sejarah sejak 2001, galeri arsip blog lama (2008–2010), dan pusat informasi rekrutmen. Salam Rimba kembali berkumandang!</p>
+          <a class="baca" href="#sejarah">Baca perjalanan kami →</a>
+        </div>
+      </article>
+      <article class="kartu-berita reveal">
+        <div class="thumb" style="background-image:url('images/latihan.jpg')">
+          <span class="label">Rekrutmen</span>
+        </div>
+        <div class="isi">
+          <div class="tgl">📅 Periode 2026/2027</div>
+          <h4>Open Recruitment Anggota Baru</h4>
+          <p>Bagi siswa SMP–SMA–SMK YPC dan santri Pondok Pesantren Cintawana yang rindu suasana alam: ARIYAPALA membuka pendaftaran anggota baru. Ikuti seleksi, Diklatsar, dan jadilah angkatan penerus ke-29 dan seterusnya.</p>
+          <a class="baca" href="#bergabung">Daftar sekarang →</a>
+        </div>
+      </article>
+      <article class="kartu-berita reveal">
+        <div class="thumb" style="background-image:url('images/bintang.jpg')">
+          <span class="label">Keluarga Besar</span>
+        </div>
+        <div class="isi">
+          <div class="tgl">📅 25–26 April 2026</div>
+          <h4>Haul Akbar KH Muhammad Toha ke-83 &amp; KH Ishak Farid ke-40</h4>
+          <p>Keluarga besar Yayasan Pesantren Cintawana — induk ARIYAPALA — menggelar Haul Akbar pendiri dan penerus pesantren dengan kajian bersama KH M Cholil Nafis. Momentum silaturahmi alumni dan santri.</p>
+          <a class="baca" href="https://www.radartasik.id/" target="_blank" rel="noopener">Liputan Radartasik →</a>
+        </div>
+      </article>
+    </div>
+    <div class="kabar-strip reveal">
+      <b>📰 Kabar lainnya dari lingkaran ARIYAPALA</b>
+      <div class="item"><b>22 Okt 2024</b> — Hari Santri Nasional: Pondok Pesantren Cintawana bersama 49 pesantren tanam <b>5.000 bibit pohon</b> bersama Danone Indonesia dan ±1.000 santri. <a href="https://news.sindonews.com/" target="_blank" rel="noopener">Liputan Sindonews</a> <span class="sumber">(sindonews.com)</span></div>
+      <div class="item"><b>Arsip 2008–2010</b> — 17 pos blog lama <a href="https://ariyapala.blogspot.com/" target="_blank" rel="noopener">ariyapala.blogspot.com</a> telah diselamatkan ke galeri arsip situs ini — lihat di <a href="#galeri">bagian Galeri</a>.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= GALERI ================= -->
+<section class="galeri-sec wm wm-kiri" id="galeri">
+  <div class="rambu" aria-hidden="true"><span class="papan">▲ POS GALERI</span><span class="tiang"></span></div>
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Dokumentasi</span>
+      <h2>Galeri Kegiatan</h2>
+      <p>Cuplikan suasana di alam bersama keluarga besar ARIYAPALA. Klik foto untuk memperbesar.</p>
+      <div class="pemisah"></div>
+    </div>
+
+    <h3 class="subjudul-sec reveal">Jejak di Rimba <small>(foto ilustrasi kegiatan)</small></h3>
+    <div class="grid-galeri">
+      <figure class="reveal" data-ket="Pendakian — tim ARIYAPALA menapaki medan pegunungan">
+        <img src="images/gunung.jpg" alt="Tim ARIYAPALA mendaki gunung" loading="lazy" width="1200" height="896">
+        <figcaption>Pendakian</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Basecamp — malam berkemah di padang tinggi">
+        <img src="images/camp.jpg" alt="Basecamp perkemahan" loading="lazy" width="1200" height="896">
+        <figcaption>Basecamp</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Alir — penyeberangan sungai dengan tali pengaman">
+        <img src="images/alir.jpg" alt="Penyeberangan sungai" loading="lazy" width="1200" height="896">
+        <figcaption>Alir &amp; Sungai</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Langit malam — berkemah di bawah taburan bintang">
+        <img src="images/bintang.jpg" alt="Langit malam bertabur bintang" loading="lazy" width="1376" height="768">
+        <figcaption>Langit Malam</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Latihan — rope course di hutan sebagai pelatihan kerja tim">
+        <img src="images/latihan.jpg" alt="Latihan rope course" loading="lazy" width="1200" height="896">
+        <figcaption>Latihan Keterampilan</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Keluarga rimba — foto bersama di hadapan gunung">
+        <img src="images/about.jpg" alt="Foto bersama keluarga ARIYAPALA" loading="lazy" width="1264" height="848">
+        <figcaption>Keluarga Rimba</figcaption>
+      </figure>
+    </div>
+
+    <h3 class="subjudul-sec reveal" style="margin-top:54px">Foto Arsip Asli <small>(ariyapala.blogspot.com, 2008–2010 — 17 pos)</small></h3>
+    <div class="grid-galeri">
+      <figure class="reveal" data-ket="Montase “Sejukkk Coyy” — anggota ARIYAPALA di puncak Gunung Es, Inggris (2009). Satu-satunya dokumentasi organisasi dari pendakian internasional tersebut.">
+        <span class="badge-arsip">Arsip 2009</span>
+        <img src="images/arsip/Sejukkk_Coyy.jpg" alt="Montase pendakian Gunung Es Inggris 2009" loading="lazy" width="1024" height="768">
+        <figcaption>“Gunung Es”, Inggris — puncak yang tak lazim bagi anak Singaparna</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Latihan Gender Out Bond gabungan bersama PK PMII Kab. Tasikmalaya, diikuti ARIYAPALA & segenap keluarga pesantren Cintawana (2008).">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/S2020157.JPG" alt="Latihan gabungan 2008" loading="lazy" width="1600" height="1200">
+        <figcaption>Latihan Gabungan Outbond bersama PK PMII Cipasung</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Anggota SMP beserta angkatan foto bersama bendera organisasi di basecamp (November 2008).">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/smp-_12.jpg" alt="Anggota SMP dan angkatan di basecamp" loading="lazy" width="384" height="288">
+        <figcaption>Anggota SMP + angkatan di basecamp</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Pembina, perintis, dan Angkatan I berkumpul di tenda basecamp (November 2008) — potret kekompakan para sesepuh ARIYAPALA.">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/Img00022.jpg" alt="Pembina dan perintis di basecamp" loading="lazy" width="640" height="480">
+        <figcaption>Pembina &amp; perintis di bawah tenda</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Helmi Ahmad M Farid (XENZOE) — pembina sekaligus admin blog arsip, di punggungan hijau Priangan (2008).">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/Arpal_08_270.jpg" alt="Pembina XENZOE" loading="lazy" width="1200" height="1600">
+        <figcaption>XENZOE — sang pembina di punggungan</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Angkatan “Tenk Baja” bersama pembina memegang bendera organisasi (Desember 2008).">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/Ariyapala-_2.jpg" alt="Angkatan dengan bendera organisasi" loading="lazy" width="768" height="576">
+        <figcaption>Siaga! Bendera hitam-oranye ARIYAPALA</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Montase Angkatan 12 (Desember 2008): foto angkatan, koleksi kaos, tim summit, dan srikandi rimba ARIYAPALA.">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/Angkatan_12.jpg" alt="Montase angkatan 12" loading="lazy" width="800" height="600">
+        <figcaption>Angkatan 12 — dari lapangan hingga summit</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Kaos resmi MUBES II (13–14 September 2010) — desain utama.">
+        <span class="badge-arsip">Arsip 2010</span>
+        <img src="images/arsip/kaos_Mubes_2010.jpg" alt="Kaos MUBES 2010" loading="lazy" width="766" height="377">
+        <figcaption>Kaos MUBES II 2010 — desain utama</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Varian kaos MUBES II 2010 (depan).">
+        <span class="badge-arsip">Arsip 2010</span>
+        <img src="images/arsip/kaos_1_Mubes_2010.jpg" alt="Kaos MUBES 2010 varian 1" loading="lazy" width="766" height="377">
+        <figcaption>Kaos MUBES II 2010 — varian 1</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Varian kaos MUBES II 2010 (belakang).">
+        <span class="badge-arsip">Arsip 2010</span>
+        <img src="images/arsip/kaos_2_Mubes_2010.jpg" alt="Kaos MUBES 2010 varian 2" loading="lazy" width="766" height="377">
+        <figcaption>Kaos MUBES II 2010 — varian 2</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Desain kaos organisasi baru (2010): Rp45.000, bahan Combet 20s. Tampak depan bergambar pemanjat, punggung bertuliskan “Anak Rimba — ARIYAPALA YPC Tasikmalaya”.">
+        <span class="badge-arsip">Arsip 2010</span>
+        <img src="images/arsip/Kaos_Baru_3.jpg" alt="Desain kaos organisasi baru 2010" loading="lazy" width="766" height="377">
+        <figcaption>Kaos organisasi baru — tampak depan &amp; belakang</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Potret anggota di depan bendera besar ARIYAPALA — Aliansi Rimba Pecinta Alam Yayasan Pesantren Cintawana (arsip blog).">
+        <span class="badge-arsip">Arsip 2008</span>
+        <img src="images/arsip/Rotation_of_Calong.jpg" alt="Anggota di depan bendera besar" loading="lazy" width="576" height="768">
+        <figcaption>Di depan bendera besar organisasi</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Potret anggota ARIYAPALA dengan syal khas Mapala, di depan bendera organisasi (arsip blog).">
+        <span class="badge-arsip">Arsip 2009</span>
+        <img src="images/arsip/Q-WILL.jpg" alt="Potret anggota dengan syal" loading="lazy" width="240" height="400">
+        <figcaption>Syal rimba — potret dari blog lama</figcaption>
+      </figure>
+      <figure class="reveal" data-ket="Foto bersama besar dengan spanduk ARIYAPALA — gambar header blog lama (ariyapala.blogspot.com), ±2008–2009.">
+        <span class="badge-arsip">Arsip Blog</span>
+        <img src="images/arsip/arpal.jpg" alt="Header blog lama: foto bersama dengan spanduk ARIYAPALA" loading="lazy" width="1600" height="551">
+        <figcaption>Header blog lama — spanduk di tengah lapangan pesantren</figcaption>
+      </figure>
+    </div>
+    <p class="arsip-note">Seluruh foto arsip adalah dokumentasi resmi ARIYAPALA yang diselamatkan dari blog lama (17 pos, 2008–2010). Hak cipta tetap pada organisasi/penulis foto aslinya.</p>
+  </div>
+</section>
+
+<!-- ================= REKAN SEJALAN ================= -->
+<section class="wm wm-kanan" id="mitra">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Jejaring Rimba</span>
+      <h2>Rekan Sejalan</h2>
+      <p>Di lembah yang sama, langkah tak pernah sendiri — ARIYAPALA bertumbuh bersama organisasi pencinta alam lain.</p>
+      <div class="pemisah"></div>
+    </div>
+    <!-- Sumber data: tab MITRA pada panel admin (lihat ADMIN-PLAN.md). Kartu di bawah adalah
+         placeholder resmi sampai pengurus memasukkan daftar mitra yang terverifikasi. -->
+    <div class="grid-mitra">
+      <div class="kartu-mitra reveal" style="grid-column:1/-1">
+        <div class="ikon" aria-hidden="true">⛺</div>
+        <div>
+          <h4>Jejaring mitra — data menyusul</h4>
+          <p>Latihan gabungan, aksi lingkungan bersama, dan tukar-menukar kurikulum kader dengan sesama organisasi pencinta alam di Tatar Priangan adalah bagian dari perjalanan ARIYAPALA. Daftar resmi rekan organisasi (nama, bentuk kerja sama, tahun dimulai) akan dimutakhirkan langsung oleh pengurus.</p>
+          <span class="rel">Menunggu data resmi pengurus</span>
+        </div>
+      </div>
+    </div>
+    <p class="arsip-note">Organisasi Anda pernah berkegiatan bersama ARIYAPALA? Sampaikan lewat <a href="#kontak">Kontak</a> — kami tindak lanjuti ke daftar Rekan Sejalan.</p>
+  </div>
+</section>
+
+<!-- ================= BERGABUNG ================= -->
+<section class="wm wm-kanan" id="bergabung">
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Karier di Rimba</span>
+      <h2>Bergabung dengan ARIYAPALA</h2>
+      <p>Tiga langkah sederhana untuk menjadi bagian dari keluarga rimba — melanjutkan estafet dari 28 angkatan sebelumnya.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="grid-join">
+      <div class="reveal">
+        <div class="langkah">
+          <div class="no">1</div>
+          <div>
+            <h4>Isi Formulir Pendaftaran</h4>
+            <p>Lengkapi data dirimu melalui formulir di samping (atau langsung via WhatsApp panitia rekrutmen).</p>
+          </div>
+        </div>
+        <div class="langkah">
+          <div class="no">2</div>
+          <div>
+            <h4>Seleksi</h4>
+            <p>Seleksi berkas, wawancara singkat, dan uji kesiapan fisik. Tidak ada uji nyali yang berlebihan — yang kami cari adalah kesungguhan.</p>
+          </div>
+        </div>
+        <div class="langkah">
+          <div class="no">3</div>
+          <div>
+            <h4>Diklatsar &amp; Pelantikan</h4>
+            <p>Peserta yang lolos mengikuti Pendidikan &amp; Latihan Dasar (Diklatsar) empat hari tiga malam ala pendiri, lalu dilantik menjadi anggota resmi dengan nomor NTA.</p>
+          </div>
+        </div>
+        <div class="syarat">
+          <h4>Syarat Pendaftaran</h4>
+          <ul>
+            <li>Siswa SMP/SMA/SMK YPC atau santri Pondok Pesantren Cintawana (periode 2026/2027).</li>
+            <li>Sehat jasmani dan rohani, serta tidak dalam kondisi sakit menular.</li>
+            <li>Berjiwa rindu pada alam, lingkungan, dan tantangan.</li>
+            <li>Diizinkan orang tua / wali (formulir persetujuan ditandatangani).</li>
+          </ul>
+        </div>
+      </div>
+      <form class="kartu reveal" id="form-pendaftaran" onsubmit="kirimWA(event)">
+        <h3>Formulir Pendaftaran Anggota Baru</h3>
+        <p class="deskripsi">Isi data di bawah — tombol kirim akan membuka WhatsApp dengan pesan yang sudah rapi.</p>
+        <div class="field">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" required placeholder="Contoh: Asep Sunandar">
+        </div>
+        <div class="field">
+          <label for="kelas">Kelas / Asrama</label>
+          <input type="text" id="kelas" required placeholder="Contoh: X TKJ 2 / Asrama Cintawana">
+        </div>
+        <div class="field">
+          <label for="nohp">Nomor WhatsApp</label>
+          <input type="tel" id="nohp" required placeholder="08xx-xxxx-xxxx">
+        </div>
+        <div class="field">
+          <label for="minat">Minat / Bidang Favorit</label>
+          <select id="minat">
+            <option>Pendakian &amp; Ekspedisi</option>
+            <option>Rescue &amp; Pertolongan Pertama</option>
+            <option>Media, Humas &amp; Dokumentasi</option>
+            <option>Administrasi &amp; Keuangan</option>
+            <option>Konservasi &amp; Pengabdian Lingkungan</option>
+            <option>Belum tahu — mau mencoba semuanya</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="pesan">Kenapa ingin bergabung? (opsional)</label>
+          <textarea id="pesan" rows="3" placeholder="Ceritakan sedikit tentang dirimu..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-emas">📩 Susun Chat WhatsApp Panitia</button>
+        <p class="catatan-form">Pesan akan dikirim ke nomor panitia rekrutmen (lihat bagian Kontak).<br>Gunakan nama NTA jika kamu alumni yang ingin aktif kembali.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ================= KONTAK ================= -->
+<section class="kontak-sec wm wm-besar" id="kontak">
+  <div class="rambu" aria-hidden="true"><span class="papan">▲ POS KONTAK · BASECAMP</span><span class="tiang"></span></div>
+  <div class="wadah">
+    <div class="kepala-sec reveal">
+      <span class="mini">Salam Rimba</span>
+      <h2>Hubungi Kami</h2>
+      <p>Kami terbuka untuk kerja sama, kegiatan, dan informasi lainnya.</p>
+      <div class="pemisah"></div>
+    </div>
+    <div class="grid-kontak">
+      <div class="kartu-kontak reveal">
+        <div class="ikon">📍</div>
+        <h4>Alamat Sekretariat</h4>
+        <p>SMK YPC / Komplek Pondok Pesantren Cintawana,<br>Desa Cikunten, Kec. Singaparna,<br>Kab. Tasikmalaya, Jawa Barat</p>
+      </div>
+      <div class="kartu-kontak reveal">
+        <div class="ikon">💬</div>
+        <h4>Kanal Panitia</h4>
+        <p>Isian <a href="#bergabung">formulir bergabung</a> tersusun otomatis menjadi chat WhatsApp siap-kirim ke panitia. Korespondensi kelembagaan dapat disampaikan langsung ke sekretariat — pengurus menindaklanjuti melalui jalur resmi.</p>
+      </div>
+      <div class="kartu-kontak reveal">
+        <div class="ikon">🌐</div>
+        <h4>Jejak Digital</h4>
+        <p>Blog arsip: <a href="https://ariyapala.blogspot.com/" target="_blank" rel="noopener">ariyapala.blogspot.com</a> (2008–2010)<br>YouTube: <a href="https://m.youtube.com/watch?v=bXeUP7XyJg4" target="_blank" rel="noopener">Diklatsar Angkatan 28 (2017)</a></p>
+      </div>
+    </div>
+    <div class="peta reveal">
+      <iframe title="Peta lokasi sekretariat ARIYAPALA — Komplek Ponpes Cintawana, Singaparna" src="https://www.google.com/maps?q=SMK%20YPC%20Pondok%20Pesantren%20Cintawana%20Singaparna%20Tasikmalaya&z=14&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer><div class="bara-wadah" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  <div class="wadah">
+    <div class="grid-footer">
+      <div>
+        <div class="brand">
+          <img src="images/logo-hidup-160.webp" alt="Logo ARIYAPALA" width="160" height="121">
+          <span><b>ARIYAPALA</b><small>Aliansi Rimba Pecinta Alam</small></span>
+        </div>
+        <p>Lembaga pecinta alam Yayasan Pesantren Cintawana &amp; SMK YPC, Singaparna, Tasikmalaya. Berdiri 7 Januari 2001 — merawat alam, menumbuhkan jiwa, mengabdi tanpa henti.</p>
+        <p style="display:flex;align-items:center;gap:10px;margin-top:14px;font-size:.82rem">
+          <img src="images/naungan-smk-ypc.gif" alt="Logo naungan" style="width:40px;height:40px;object-fit:contain;background:#fff;border-radius:8px;padding:3px" width="284" height="250">
+          Di bawah naungan <b style="color:#fff">Yayasan Pesantren Cintawana</b>
+        </p>
+      </div>
+      <div>
+        <h5>Navigasi</h5>
+        <ul>
+          <li><a href="#profil">Profil &amp; Visi Misi</a></li>
+          <li><a href="#sejarah">Sejarah Organisasi</a></li>
+          <li><a href="#struktur">Struktur Kepengurusan</a></li>
+          <li><a href="#angkatan">Angkatan &amp; Anggota</a></li>
+          <li><a href="#program">Program Kerja</a></li>
+          <li><a href="#galeri">Galeri &amp; Arsip</a></li>
+          <li><a href="#mitra">Rekan Sejalan</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Ikuti Kami</h5>
+        <ul>
+          <li><a href="https://ariyapala.blogspot.com/" target="_blank" rel="noopener">Blog Arsip (2008–2010)</a></li>
+          <li><a href="https://m.youtube.com/watch?v=bXeUP7XyJg4" target="_blank" rel="noopener">YouTube — Dokumentasi Diklatsar 28</a></li>
+          <li><a href="#bergabung">Bergabung</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Naungan</h5>
+        <ul>
+          <li><a href="https://pstcintawana.com" target="_blank" rel="noopener">Pesantren Cintawana (pstcintawana.com)</a></li>
+          <li><a href="https://www.instagram.com/pesantren_cintawana/" target="_blank" rel="noopener">IG @pesantren_cintawana</a></li>
+          <li><span style="opacity:.72">TK Islam · SMP · SMA Pesantren Cintawana · SMK YPC</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="bawah-footer">
+    © <span id="tahun"></span> ARIYAPALA — Aliansi Rimba Pecinta Alam Yayasan Pesantren Cintawana · Est. 7 Januari 2001 · Dibuat dengan ❤️ untuk alam. <b>Salam Rimba!</b> · desain &amp; dokumentasi situs © <b>@TenkBaja</b>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pratinjau foto">
+  <button class="tutup" id="tutup-lightbox" aria-label="Tutup pratinjau">×</button>
+  <button class="lb-nav lb-prev" id="lb-prev" aria-label="Foto sebelumnya">‹</button>
+  <img id="lb-img" src="" alt="">
+  <button class="lb-nav lb-next" id="lb-next" aria-label="Foto berikutnya">›</button>
+  <div class="ket" id="lb-ket"></div>
+</div>
+<button id="ke-atas" type="button" aria-label="Kembali ke atas"><span class="panah">▲</span><small>BASECAMP</small></button>
+
+<script>
+  // ---- Splash intro «Jalur Pendakian» — diatur panel admin tab SITUS (sesi 18) ----
+  (function () {
+    const SP = document.getElementById('splash');
+    if (!SP) return;
+    const q = new URLSearchParams(location.search);
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    let tampil = !reduce && !sessionStorage.getItem('ap-splash');
+    if (q.has('tanpasplash')) tampil = false;
+    if (q.has('splash')) tampil = true;
+    if (!tampil) return;
+    const bubar = () => {
+      if (!SP.classList.contains('aktif')) return;
+      SP.classList.add('bubar');
+      sessionStorage.setItem('ap-splash', '1');
+      setTimeout(() => SP.classList.remove('aktif', 'bubar'), 520);
+    };
+    SP.classList.add('aktif');
+    let timer = setTimeout(bubar, 3600);
+    fetch('/api/situs', { headers: { Accept: 'application/json' } })
+      .then(r => (r.ok ? r.json() : null))
+      .then(d => {
+        if (!Array.isArray(d) || !d.length) return;
+        const m = Object.fromEntries(d.map(x => [String(x.kunci).toLowerCase(), x.nilai]));
+        if (m.splash_tagline) document.getElementById('splash-tagline').textContent = m.splash_tagline;
+        if (String(m.splash_aktif).toLowerCase().startsWith('n')) { bubar(); return; }
+        const dur = parseFloat(m.splash_durasi);
+        if (isFinite(dur) && dur > 0) { clearTimeout(timer); timer = setTimeout(bubar, dur * 1000 + 600); }
+      })
+      .catch(() => {});
+    SP.addEventListener('click', bubar);
+    document.getElementById('splash-lewat').addEventListener('click', (e) => { e.stopPropagation(); bubar(); });
+  })();
+
+  // Tahun footer
+  document.getElementById('tahun').textContent = new Date().getFullYear();
+
+  // Header bayangan saat scroll
+  const header = document.getElementById('header');
+  const progresIsi = document.getElementById('progres-isi');
+  const keAtas = document.getElementById('ke-atas');
+  const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function onScroll() {
+    header.classList.toggle('berbayang', window.scrollY > 40);
+    const maks = document.documentElement.scrollHeight - window.innerHeight;
+    progresIsi.style.width = (maks > 0 ? (window.scrollY / maks) * 100 : 0) + '%';
+    keAtas.classList.toggle('muncul', maks > 0 && window.scrollY > maks * 0.6);
+  }
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+  keAtas.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+  // Menu mobile
+  const burger = document.getElementById('burger');
+  const menu = document.getElementById('menu');
+  burger.addEventListener('click', () => {
+    burger.classList.toggle('buka');
+    menu.classList.toggle('tampil');
+  });
+  menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    burger.classList.remove('buka');
+    menu.classList.remove('tampil');
+  }));
+
+  // Reveal on scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('muncul');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // Lightbox galeri + navigasi panah & swipe (sesi 18)
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lb-img');
+  const lbKet = document.getElementById('lb-ket');
+  const lbFigs = () => Array.from(document.querySelectorAll('.galeri-sec .grid-galeri figure'));
+  let LB_I = 0;
+  function bukaLB(i) {
+    const fs = lbFigs();
+    if (!fs.length) return;
+    LB_I = (i + fs.length) % fs.length;
+    const img = fs[LB_I].querySelector('img');
+    if (!img) return;
+    lbImg.src = img.src;
+    lbImg.alt = img.alt || '';
+    lbKet.textContent = fs[LB_I].dataset.ket || '';
+    lb.classList.add('tampil');
+    document.body.style.overflow = 'hidden';
+  }
+  document.querySelector('.galeri-sec').addEventListener('click', (e) => {
+    const fig = e.target.closest('figure');
+    if (!fig || !fig.querySelector('img')) return;
+    bukaLB(lbFigs().indexOf(fig));
+  });
+  function tutupLB() {
+    lb.classList.remove('tampil');
+    document.body.style.overflow = '';
+  }
+  document.getElementById('tutup-lightbox').addEventListener('click', tutupLB);
+  document.getElementById('lb-prev').addEventListener('click', () => bukaLB(LB_I - 1));
+  document.getElementById('lb-next').addEventListener('click', () => bukaLB(LB_I + 1));
+  lb.addEventListener('click', (e) => { if (e.target === lb) tutupLB(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') tutupLB();
+    if (!lb.classList.contains('tampil')) return;
+    if (e.key === 'ArrowLeft') bukaLB(LB_I - 1);
+    if (e.key === 'ArrowRight') bukaLB(LB_I + 1);
+  });
+  let sentuhX = null;
+  lb.addEventListener('touchstart', (e) => { sentuhX = e.changedTouches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', (e) => {
+    if (sentuhX === null) return;
+    const dx = e.changedTouches[0].clientX - sentuhX;
+    if (Math.abs(dx) > 44) bukaLB(LB_I + (dx < 0 ? 1 : -1));
+    sentuhX = null;
+  }, { passive: true });
+
+  // Form pendaftaran -> WhatsApp
+  function kirimWA(e) {
+    e.preventDefault();
+    const nama = document.getElementById('nama').value;
+    const kelas = document.getElementById('kelas').value;
+    const nohp = document.getElementById('nohp').value;
+    const minat = document.getElementById('minat').value;
+    const pesan = document.getElementById('pesan').value;
+    const isi =
+      `*Pendaftaran Anggota Baru ARIYAPALA*\n\n` +
+      `Nama: ${nama}\n` +
+      `Kelas/Asrama: ${kelas}\n` +
+      `No. WA: ${nohp}\n` +
+      `Minat: ${minat}\n` +
+      `Pesan: ${pesan || '-'}\n\n` +
+      `Salam Rimba! 🌲`;
+    // Bila panel admin sudah mengisi tab KONTAK (key: wa) → terkirim langsung ke panitia
+    const tujuan = window.ARIYAPALA_WA ? `https://wa.me/${window.ARIYAPALA_WA}?text=` : `https://wa.me/?text=`;
+    window.open(tujuan + encodeURIComponent(isi), '_blank');
+  }
+</script>
+<script src="js/sumber-data.js"></script>
+<script>
+/* ====== HIDRASI PANEL ======
+   Situs mengisi BERITA · GALERI · PENGURUS · MITRA · KONTAK dari /api/<tab>
+   (Cloudflare Pages Function → Google Apps Script). Fetch gagal / data kosong →
+   konten awal (seed) tetap tampil; situs lokal tanpa Pages pun aman. */
+(async () => {
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+  const urlImg = id => id && !/^https?:/.test(id) ? 'https://lh3.googleusercontent.com/d/' + id + '=w1200' : (id || '');
+  /* ---- SUMBER DATA: proxy /api (Cloudflare) ATAU langsung ke Google Apps Script ----
+     Isi window.ARIYAPALA_API SEBELUM skrip ini berjalan bila perlu:
+       '/api'                                           → proxy Cloudflare (bawa cache 5 menit)
+       'https://script.google.com/macros/s/ID-GAS/exec' → langsung ke GAS (?sheet=<tab>)
+     Kosong → '/api'. Bila ambil data gagal (404/CORS/quota), seed bawaan tetap tampil. */
+  const DASAR_API = String(window.ARIYAPALA_API || '/api').replace(/\/$/, '');
+  const urlTab = t => /\/exec$/.test(DASAR_API) ? DASAR_API + '?sheet=' + t : DASAR_API + '/' + t;
+  const get = async t => { try { const r = await fetch(urlTab(t), { headers: { Accept: 'application/json' } }); if (!r.ok) return null; const d = await r.json(); return Array.isArray(d) && d.length ? d : null; } catch { return null; } };
+
+  /* ---- Tautan acara (kunci admin form_acara & kalender_acara — tab SITUS / KONTAK) ----
+     Baris HANYA dibuat bila kunci terisi dan URL berawalan https://. Tanpa kunci sama
+     sekali → tidak ada elemen & tidak ada teks placeholder di situs publik. */
+  const kunciAcara = baris => {
+    const m = {};
+    (baris || []).forEach(r => {
+      const k = String(r.kunci ?? r.key ?? '').toLowerCase().trim();
+      const v = String(r.nilai ?? r.value ?? '').trim();
+      if ((k === 'form_acara' || k === 'kalender_acara') && /^https:\/\//i.test(v)) m[k] = v;
+    });
+    return m;
+  };
+  window.ARIYAPALA_TAUTAN_ACARA = function (m) {
+    const form = document.getElementById('form-pendaftaran');
+    if (!form || !form.parentNode) return;
+    const lama = document.querySelector('.tautan-acara');
+    if (lama) lama.remove();
+    const f = m && m.form_acara, k = m && m.kalender_acara;
+    if (!f && !k) return;
+    const tombol = (href, ikon, teks) => `<a class="btn-tautan-acara" href="${esc(href)}" target="_blank" rel="noopener">${ikon} ${esc(teks)}</a>`;
+    const baris = document.createElement('div');
+    baris.className = 'tautan-acara';
+    baris.innerHTML = (f ? tombol(f, '📝', 'Formulir Pendaftaran Acara') : '') + (k ? tombol(k, '🗓️', 'Lihat Kalender Agenda') : '');
+    form.parentNode.insertBefore(baris, form);
+  };
+
+  const berita = await get('berita');
+  if (berita) document.querySelector('.grid-berita').innerHTML = berita.slice(0, 6).map(b =>
+    `<article class="kartu-berita reveal muncul">
+       <div class="thumb" style="background-image:url('${esc(urlImg(b.thumb) || 'images/hero.jpg')}')"><span class="label">${esc(b.label || 'Kabar')}</span></div>
+       <div class="isi"><div class="tgl">📅 ${esc(b.tanggal)}</div><h4>${esc(b.judul)}</h4><p>${esc(b.ringkas)}</p>
+       ${b.link ? `<a class="baca" href="${esc(b.link)}" target="_blank" rel="noopener">Baca selengkapnya →</a>` : ''}</div>
+     </article>`).join('');
+
+  const galeri = await get('galeri');
+  if (galeri) document.querySelector('.grid-galeri').insertAdjacentHTML('afterbegin', galeri.map(g =>
+    `<figure class="reveal muncul" data-ket="${esc(g.keterangan)}${g.tahun ? ' · ' + esc(g.tahun) : ''}">
+       ${g.badge ? `<span class="badge-arsip">${esc(g.badge)}</span>` : ''}
+       <img src="${esc(urlImg(g.foto))}" alt="${esc(g.keterangan)}" loading="lazy">
+       <figcaption>${esc(g.keterangan)}</figcaption>
+     </figure>`).join(''));
+
+  const peng = await get('pengurus');
+  if (peng) {
+    const aktif = peng.filter(p => !p.aktif || String(p.aktif)[0].toLowerCase() === 'y');
+    if (aktif.length) document.querySelector('#struktur .catatan').outerHTML =
+      `<div class="baris-pengurus reveal muncul">${aktif.map(p =>
+        `<div class="kartu-pengurus"><div class="awalan">${esc((p.nama || '?').trim()[0] || '?')}</div><div class="jabatan">${esc(p.jabatan)}</div><h4 class="nm">${esc(p.nama)}${p.angkatan ? ` <i>(${esc(p.angkatan)})</i>` : ''}</h4></div>`).join('')}</div>`;
+  }
+
+  /* ---- Angkatan & Anggota (seed = data terverifikasi; panel menimpa saat siap) ---- */
+  const SEED={
+    angkatan:[{id:'I',label:'I «Tenk Baja»',tahun:'2001',jumlah:'5'}],
+    anggota:[
+      {id:'1',nama:'Dadan Muhamad Ramdan',angkatan:'I «Tenk Baja»'},
+      {id:'2',nama:'Winanto',rimba:'Calong',angkatan:'I «Tenk Baja»'},
+      {id:'3',nama:'Abdullah Starsky',rimba:'Kiwil',jabatan:'Pembuat situs',angkatan:'I «Tenk Baja»'},
+      {id:'4',nama:'Torikul Haq',angkatan:'I «Tenk Baja»'},
+      {id:'5',nama:'Sudin',angkatan:'I «Tenk Baja»'},
+    ]
+  };
+  const ROOTANG=document.getElementById('ang-root');
+  const inisial=n=>{const p=String(n||'?').trim().split(/\s+/);return ((p[0]||'?')[0]+(p[1]?p[1][0]:'')).toUpperCase()};
+  function renderAng(A,G){
+    A=A||[]; G=G||[];
+    const list=A.length?A:G.reduce((m,x)=>{if(x.angkatan&&!m.find(a=>(a.label||a.id)===x.angkatan))m.push({label:x.angkatan});return m},[]);
+    if(!list.length){ROOTANG.innerHTML='<p style="color:var(--abu);text-align:center">Belum ada data angkatan.</p>';return}
+    ROOTANG.innerHTML='<div class="bar-ang">'+list.map((a,i)=>
+      `<button class="ang-chip${i===0?' on':''}" data-i="${i}">${esc(a.label||a.id||'Angkatan '+(i+1))}${a.jumlah?` <b>${esc(a.jumlah)}</b>`:''}</button>`).join('')+
+      '</div><div class="ang-body"></div>';
+    const show=i=>{
+      ROOTANG.querySelectorAll('.ang-chip').forEach(c=>c.classList.toggle('on',+c.dataset.i===i));
+      const a=list[i], key=a.label||a.id;
+      const org=G.filter(g=>g.angkatan===key);
+      const ket=org.find(o=>/ketua|leader/i.test(o.jabatan||''));
+      ROOTANG.querySelector('.ang-body').innerHTML=
+        `<div class="ang-head"><span class="thn">▲ ${esc(a.tahun||'')}</span><h4>Angkatan ${esc(String(key))}</h4>${a.deskripsi?`<p>${esc(a.deskripsi)}</p>`:''}${ket?`<span class="ketchip">Ketua Angkatan: ${esc(ket.nama)}</span>`:''}</div>`+
+        `<div class="ang-grid">${org.map(o=>{
+          const ini=inisial(o.nama);
+          return `<div class="orang"><div class="foto">${o.foto?`<img src="${esc(urlImg(o.foto))}" alt="${esc(o.nama)}" loading="lazy" onerror="this.replaceWith('${ini}')">`:ini}</div><b>${esc(o.nama)}</b>${o.rimba?`<small>“${esc(o.rimba)}”</small>`:''}${o.jabatan&&!/ketua|leader/i.test(o.jabatan)?`<span class="tag">${esc(o.jabatan)}</span>`:''}</div>`;
+        }).join('')||'<p style="grid-column:1/-1;color:var(--abu);font-size:.86rem">Belum ada anggota terdaftar untuk angkatan ini — isi lewat panel admin (tab ANGGOTA).</p>'}</div>`;
+    };
+    ROOTANG.querySelector('.bar-ang').addEventListener('click',e=>{const b=e.target.closest('.ang-chip');if(b)show(+b.dataset.i)});
+    show(0);
+  }
+  renderAng(SEED.angkatan,SEED.anggota);
+
+  const mitra = await get('mitra');
+  if (mitra) document.querySelector('.grid-mitra').innerHTML = mitra.map(m =>
+    `<div class="kartu-mitra reveal muncul" style="border-style:solid;flex-direction:column;text-align:center">
+       ${m.logo ? `<img src="${esc(urlImg(m.logo))}" alt="${esc(m.nama)}" style="max-height:92px;width:auto;height:auto;margin-bottom:10px">` : '<div class="ikon">🤝</div>'}
+       <h4>${esc(m.nama)}${m.singkatan ? ` <i>“${esc(m.singkatan)}”</i>` : ''}</h4>
+       <p>${esc(m.bentuk)}${m.tahun ? ` · sejak ${esc(m.tahun)}` : ''}</p>
+       ${m.link ? `<a class="rel" href="${esc(m.link)}" target="_blank" rel="noopener">Kunjungi →</a>` : `<span class="rel">${esc(m.bentuk || 'Mitra')}</span>`}
+     </div>`).join('');
+
+  const [angL,anggL]=await Promise.all([get('angkatan'),get('anggota')]);
+  if(angL||anggL) renderAng(angL||SEED.angkatan,anggL||SEED.anggota);
+
+  const kontak = await get('kontak');
+  if (kontak) {
+    const m = Object.fromEntries(kontak.map(k => [String(k.key).toLowerCase(), k.value]));
+    const wa = String(m.wa || '').replace(/\D/g, '');
+    if (wa) {
+      window.ARIYAPALA_WA = wa;
+      const kartu = document.querySelectorAll('#kontak .kartu-kontak')[1];
+      if (kartu) {
+        kartu.querySelector('p').innerHTML =
+          `WA panitia: <a href="https://wa.me/${esc(wa)}" target="_blank" rel="noopener">${esc(m.wa_display || wa)}</a>` +
+          (m.email ? `<br>Email: <a href="mailto:${esc(m.email)}">${esc(m.email)}</a>` : '') +
+          (m.ig ? `<br>Instagram: <a href="https://instagram.com/${esc(String(m.ig).replace(/^@/, ''))}" target="_blank" rel="noopener">@${esc(String(m.ig).replace(/^@/, ''))}</a>` : '');
+      }
+    }
+  }
+
+  /* ---- Tautan acara: kunci di tab SITUS dan/atau KONTAK (keduanya digabung) ---- */
+  const situs = await get('situs');
+  const acara = Object.assign({}, kunciAcara(situs), kunciAcara(kontak));
+  window.ARIYAPALA_ACARA = acara;
+  window.ARIYAPALA_TAUTAN_ACARA(acara);
+})();
+</script>
+<script src="js/asisten.js"></script>
+<!-- Catatan sumber data: baca README.md §"Sumber data" (saklar window.ARIYAPALA_API). -->
+</body>
+</html>

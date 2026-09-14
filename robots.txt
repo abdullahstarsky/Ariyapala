@@ -1,0 +1,5 @@
+# robots.txt — ARIYAPALA (ganti baris Sitemap bila domain final sudah ditentukan)
+User-agent: *
+Allow: /
+
+Sitemap: https://ariyapala.pages.dev/sitemap.xml
