@@ -7,21 +7,21 @@
 <meta name="description" content="Website resmi ARIYAPALA (Aliansi Rimba Pecinta Alam) — lembaga pecinta alam Yayasan Pesantren Cintawana & SMK YPC, Singaparna, Tasikmalaya. Berdiri 7 Januari 2001. Salam Rimba!">
 <meta name="theme-color" content="#0d3b2e">
 <link rel="icon" type="image/png" href="images/logo-hidup-160.png">
-<link rel="canonical" href="https://ariyapala.pages.dev/">
+<link rel="canonical" href="https://abdullahstarsky.github.io/ariyapala/">
 <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="ARIYAPALA">
 <meta property="og:locale" content="id_ID">
 <meta property="og:title" content="ARIYAPALA — Aliansi Rimba Pecinta Alam Cintawana">
 <meta property="og:description" content="Lembaga pecinta alam Yayasan Pesantren Cintawana & SMK YPC, Singaparna, Tasikmalaya. Berdiri 7 Januari 2001. Salam Rimba!">
-<meta property="og:url" content="https://ariyapala.pages.dev/">
-<meta property="og:image" content="https://ariyapala.pages.dev/images/og-share.png">
+<meta property="og:url" content="https://abdullahstarsky.github.io/ariyapala/">
+<meta property="og:image" content="https://abdullahstarsky.github.io/ariyapala/images/og-share.png">
 <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="Emblem ARIYAPALA di atas latar hutan dengan tagline organisasi">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="ARIYAPALA — Aliansi Rimba Pecinta Alam Cintawana">
 <meta name="twitter:description" content="Lembaga pecinta alam Ponpes Cintawana & SMK YPC, Singaparna, Tasikmalaya — sejak 7 Januari 2001.">
-<meta name="twitter:image" content="https://ariyapala.pages.dev/images/og-share.png">
+<meta name="twitter:image" content="https://abdullahstarsky.github.io/ariyapala/images/og-share.png">
 <script type="application/ld+json">
 {
  "@context":"https://schema.org","@type":"Organization",
@@ -29,8 +29,8 @@
  "alternateName":"Aliansi Rimba Pecinta Alam Yayasan Pesantren Cintawana",
  "foundingDate":"2001-01-07",
  "description":"Lembaga pecinta alam Yayasan Pesantren Cintawana dan SMK YPC di Singaparna, Kabupaten Tasikmalaya, Jawa Barat.",
- "url":"https://ariyapala.pages.dev/",
- "logo":"https://ariyapala.pages.dev/images/logo-ariyapala-hidup.png",
+ "url":"https://abdullahstarsky.github.io/ariyapala/",
+ "logo":"https://abdullahstarsky.github.io/ariyapala/images/logo-ariyapala-hidup.png",
  "parentOrganization":{"@type":"Organization","name":"Yayasan Pesantren Cintawana"},
  "sameAs":["https://ariyapala.blogspot.com/"],
  "address":{"@type":"PostalAddress","streetAddress":"Komplek Ponpes Cintawana, Desa Cikunten","addressLocality":"Singaparna","addressRegion":"Jawa Barat","addressCountry":"ID"}
@@ -82,6 +82,17 @@
   .menu a:hover{background:rgba(247,201,72,.18);color:var(--emas)}
   .menu .btn-join{background:linear-gradient(135deg,var(--emas),var(--emas-tua));color:var(--hutan-tua)!important;margin-left:8px;box-shadow:0 6px 16px rgba(247,201,72,.35)}
   .menu .btn-join:hover{transform:translateY(-2px);background:linear-gradient(135deg,#ffd968,var(--emas))}
+  /* PERBAIKAN tata letak: papan nama ARIYAPALA menabrak tautan "Beranda".
+     Wadah 1120px hanya memberi 1080px, sedangkan papan nama + 12 tautan butuh 1297px
+     pada ukuran semula. Di mode baris (≥1161px) jaraknya dirapatkan jadi ±1038px. */
+  @media(min-width:1161px){
+    .nav .brand{gap:10px}
+    .nav .brand span,.nav .brand small{white-space:nowrap}
+    .nav .brand small{font-size:.55rem;letter-spacing:.05em}
+    .menu{gap:2px}
+    .menu a{font-size:.84rem;padding:9px 7px}
+    .menu .btn-join{margin-left:4px}
+  }
   .burger{display:none;background:none;border:none;cursor:pointer;padding:8px}
   .burger span{display:block;width:26px;height:3px;background:#fff;border-radius:3px;margin:5px 0;transition:.3s}
   .burger.buka span:nth-child(1){transform:translateY(8px) rotate(45deg)}
